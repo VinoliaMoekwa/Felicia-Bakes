@@ -37,5 +37,11 @@ function showSlides(n) {
     dots[slideIndex-1].className += " active";
 }
 
+// Order button 
+
+function actionFunction() {
+    alert("Action buton clicked");
+}
+
 
 
