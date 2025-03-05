@@ -320,3 +320,212 @@ footer {
         font-size: 2em;
     }
 }
+
+/* Styling the form container */
+form {
+    width: 100%;
+    max-width: 600px; /* Limit the form's width */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling the headings */
+  h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Styling the form labels */
+  label {
+    display: block; /* Ensures the label takes up full width */
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Styling input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="datetime-local"],
+  input[type="file"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Space between fields */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Styling the submit button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #c8b6ff;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #a287f3; /* Slightly darker green on hover */
+  }
+  
+  /* Styling the checkbox */
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Styling the checkbox label */
+  label[for="terms"] {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* Adding space between each form section */
+  form h3, form label, form input, form textarea, form select {
+    margin-bottom: 20px;
+  }
+  
+  /* Styling the disabled input (e.g., pickup/delivery preference) */
+  input[disabled], textarea[disabled] {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+  }
+  
+  /* Optional: Add some styles for the file input */
+  input[type="file"] {
+    border: none;
+    padding: 8px;
+  }
+  
+/*  Upadated Home page */
+
+ 
+.bento_cake {
+    box-shadow: #c8b6ff;
+    border-color: #a287f3;
+    display: inline;              
+    justify-content: center;    
+    align-items: center; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);    
+     
+}
+
+.bento_cake img {
+    width: 500px;  
+    height: 500px; 
+    object-fit: cover; 
+
+}
+
+.cup_cakes {
+    box-shadow: #c8b6ff;
+    border-color: #a287f3;
+    display: inline;              
+    justify-content: center;    
+    align-items: center; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);    
+     
+}
+
+.cup_cakes img {
+    width: 500px;  
+    height: 500px; 
+    object-fit: cover; 
+
+}
+
+.popular_cake {
+    box-shadow: #c8b6ff;
+    border-color: #a287f3;
+    display: inline;              
+    justify-content: center;    
+    align-items: center; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);    
+     
+}
+
+.popular_cake video {
+    width: 500px;  
+    height: 500px; 
+    object-fit: cover; 
+
+}
+
+.custom-orders {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f1ea;
+}
+
+.custom-orders img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.order-button-custom {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color:#c8b6ff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.order-button-custom:hover {
+    background-color:#a88ff3 ;
+}
+
+/* Styling the contact page */
+
+
+        
+
+        
+        
+
+        #contact-container {
+            
+            background: linear-gradient(145deg, #c7a0f3, #f79fee); /* Soft pastel gradient */
+            border-radius: 12px;
+            box-shadow: 6px 6px 12px #a99be3, -6px -6px 12px #e5d9ff; /* Soft glowing effect */
+            padding:10px;
+            width: 90%; /* Makes it responsive */
+            max-width: 500px; /* Prevents it from getting too large */
+            margin: auto;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        button {
+            background:#574a7e ;
+            color: white;
+            font-size: 16px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background:#70629a ;
+            transform: scale(1.05);
+        }

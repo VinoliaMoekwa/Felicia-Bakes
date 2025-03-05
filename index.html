@@ -38,7 +38,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="order.html">Order</a></li>
-                    <li><a href="#contact.html">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -78,56 +78,49 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
-    <!-- About Us Section -->
-    <section class="about-us">
-        <h2>About Us</h2>
-        <p>Welcome to Felicia Bakes! We specialize in creating delicious and beautiful cakes for every occasion. Our commitment to quality and customer satisfaction is unmatched. Discover our story and what makes our cakes special.</p>
+
+    <section>
+        
+        <div class="popular_cake">
+            <h2>Most Loved Cake</h2>
+            <video controls>
+                <source src="images/gold_cake.MP4" type="video/mp4">
+            </video>
+        </div>
+    
+        
+        <div class="bento_cake">
+            <h2>DIY Bento Cake Box</h2>
+            <img src="images/bento_diy_box.webp" alt="Bento DIY cakes">
+        </div>
+    
+        
+        <div class="cup_cakes">
+            <h2>Pretty Tasty Cupcakes</h2>
+            <img src="images/cup_cakes.webp" alt="Pretty Tasty Cup Cakes">
+        </div>
     </section>
 
-    <!---Testimonials Section-->
-    <section class="testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonial">
-            <p>"The best cake I've ever had! My wedding cake was a huge hit thanks to [Your Bakery]." - Jane Doe</p>
-        </div>
-        <div class="testimonial">
-            <p>"Amazing service and delicious cakes. Highly recommend!" - John Smith</p>
-        </div>
-        <div class="testimonial">
-            <p>"Beautifully crafted cakes that taste as good as they look." - Sarah Lee</p>
-        </div>
-        <div class="testimonial">
-            <p>"The best cake I've ever had! My wedding cake was a huge hit thanks to [Your Bakery]." - Jane Doe</p>
-        </div>
-        <div class="testimonial">
-            <p>"Amazing service and delicious cakes. Highly recommend!" - John Smith</p>
-        </div>
-        <div class="testimonial">
-            <p>"Beautifully crafted cakes that taste as good as they look." - Sarah Lee</p>
-        </div>
-        <div class="testimonial">
-            <p>"The best cake I've ever had! My wedding cake was a huge hit thanks to [Your Bakery]." - Jane Doe</p>
-        </div>
-        <div class="testimonial">
-            <p>"Amazing service and delicious cakes. Highly recommend!" - John Smith</p>
-        </div>
-        <div class="testimonial">
-            <p>"Beautifully crafted cakes that taste as good as they look." - Sarah Lee</p>
-        </div><div class="testimonial">
-            <p>"The best cake I've ever had! My wedding cake was a huge hit thanks to [Your Bakery]." - Jane Doe</p>
-        </div>
-        <div class="testimonial">
-            <p>"Amazing service and delicious cakes. Highly recommend!" - John Smith</p>
-        </div>
-        <div class="testimonial">
-            <p>"Beautifully crafted cakes that taste as good as they look." - Sarah Lee</p>
-        </div>
+    <section class="custom-orders">
+        <h2>Custom Orders</h2>
+        <p>Looking for something unique? Whether it's a birthday, wedding, or any special event, we can create a cake just for you!</p>
+        <img src="images/cake1.webp" alt="Custom Cake">
+        <a href="order.html" class="order-button-custom ">Place Your Custom Order</a>
     </section>
-    <button class="action-button"  href="menu.html">Place Your Order</button>
+    
+    
 
+
+        
     <!--Footer-->
     <footer>
         <div class="footer-container">
+            <div class="footer-section disclaimer">
+                <h2>Disclamer</h2>
+                <p>Orders will only be confirmed once payment is reflected</p>
+                <p>Cancellation to be made within 24 hours of placing order</p>
+            </div>
+
             <div class="footer-section links">
                 <h2>Quick Links</h2>
                 <ul>
@@ -154,8 +147,9 @@
         <div class="footer-bottom">
             <p>&copy; 2024 Felicia Bakes. All rights reserved</p>
         </div>
-        <script src="scripts/main.js"></script>
+        <div>
     </footer>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
 

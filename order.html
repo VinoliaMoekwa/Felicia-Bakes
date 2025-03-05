@@ -38,15 +38,124 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="order.html">Order</a></li>
-                    <li><a href="#contact.html">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <h2> Please fill the form below to place your order</h2>
+      <form id="order-form">
+        <h3>Customer Information</h3>
+        <label for="full-name"> Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+
+        <label for="contact-number"> Contact Number:</label>
+        <input type="tel" id="contact-number" name="contact-number" required>
+
+        <label for="email"> Full Name:</label>
+        <input type="email" id="email" name="email" required>
+
+        <h3>Order Details</h3>
+        <label for="product-type">Type of Baked Good:</label>
+        <select id="product-type" name="product-type">
+          <option value="cake">Cake</option>
+          <option value="cupcake">Cupcakes</option>
+        </select>
+      
+        <label for="flavor">Flavor Selection:</label>
+        <select id ="flavour" name="flavour">
+            <option value="chocolate">Chocolate</option>
+            <option value="vanilla">Vanilla</option>
+            <option value="red velvet">Red velvet</option>
+            <option value="carrot">Carrot</option>
+            <option value="strawberry">strawberry</option>
+            <option value="banana">Banana</option>
+            <option value="coffee">Coffee</option>
+            <option value="marble">Marble</option>
+            <option value="cheese">Cheese</option>
+        </select>
+      
+        <label for="filling">Filling Selection:</label>
+        <select id="filling" name="filling">
+            <option value="Buttercream">Buttercream</option>
+            <option value="Whipped Cream">Whipped Cream</option>
+            <option value="Fruit Jam"> Fruit Jam</option>
+            <option value="Cream Cheese">Cream Cheese</option>
+            <option value="Chocolate Ginache">Chocolate Ginache</option>
+        </select>
+      
+      
+        <label for="size">Size/Servings:
+        (refer to menu for correct sizing)</label>
+        <input type="number" id="size" name="size" required>
+      
+        <label for="design">Design Description:</label>
+        <textarea id="design" name="design" required></textarea>
+      
+        <label for="images">Reference Images (optional):</label>
+        <input type="file" id="images" name="images" accept="image/*">
+      
+        <h3>Customization Options</h3>
+        <label for="color-scheme">Color Scheme:</label>
+        <input type="text" id="color-scheme" name="color-scheme">
+      
+        <label for="message">Personalized Message:</label>
+        <input type="text" id="message" name="message">
+      
+        <label for="dietary">Dietary Restrictions:</label>
+        <textarea id="dietary" name="dietary"></textarea>
+      
+        <h3>Event Details</h3>
+        <label for="occasion">Occasion Type:</label>
+        <select id="occasion" name="occasion">
+          <option value="birthday">Birthday</option>
+          <option value="wedding">Wedding</option>
+          <option value="anniversary">Anniversary</option>
+        </select>
+      
+        <label for="event-date">Event Date and Time:</label>
+        <input type="datetime-local" id="event-date" name="event-date" required>
+    
+      
+        <label for="pickup">Pickup/Delivery Preference:</label>
+        <input type="text" id="pickup" name="pickup" value="Collection Only in Centurion" disabled>
+      
+        <h3>Additional Notes</h3>
+        <label for="special-instructions">Special Instructions:</label>
+        <textarea id="special-instructions" name="special-instructions"></textarea>
+      
+        <h3>Terms and Conditions</h3>
+        <label for="lead-time">Lead Time:</label>
+        <input type="text" id="lead-time" name="lead-time" value="Specify your notice period" disabled>
+      
+        <label for="payment">Payment Details:</label>
+        <input type="text" id="payment" name="payment" value="Only EFTs are accepted and orders are only proccessed once the deposit has reflected" disabled>
+      
+        <label for="cancellation">Cancellation Policy:</label>
+        <textarea id="cancellation" name="cancellation" disabled>Conditions under which orders can be canceled or modified.</textarea>
+      
+        <label for="terms">
+          <input type="checkbox" id="terms" name="terms" required>
+          I agree to the terms and conditions
+        </label>
+      
+        <button id="submitOder" type="submit">Submit Order</button>
+
+    
+      </form>
     <!--Footer-->
+
+    
     <footer>
         <div class="footer-container">
+            <div class=" footer-disclamer section">
+                <h2>Disclamer</h2>
+                <p>Orders will only be confirmed once payment is reflected</p>
+                <p>Cancellation to be made within 24 hours of placing order</p>
+                <p></p>
+            </div>
+
             <div class="footer-section links">
                 <h2>Quick Links</h2>
                 <ul>
@@ -73,8 +182,8 @@
         <div class="footer-bottom">
             <p>&copy; 2024 Felicia Bakes. All rights reserved</p>
         </div>
-        <script src="scripts/main.js"></script>
     </footer>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
 
