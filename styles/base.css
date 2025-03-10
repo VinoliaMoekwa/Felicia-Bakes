@@ -467,7 +467,7 @@ form {
 .custom-orders {
     text-align: center;
     padding: 40px;
-    background-color: #f8f1ea;
+    background-color: linear-gradient(145deg, #c7a0f3, #f79fee); ;
 }
 
 .custom-orders img {
