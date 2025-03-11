@@ -542,3 +542,18 @@ background-color: #a287f3;
             background:#70629a ;
             transform: scale(1.05);
         }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px; /* Adjust text size */
+            }
+            .container {
+                width: 100%; /* Make sure elements fit within the screen */
+                padding: 10px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        
