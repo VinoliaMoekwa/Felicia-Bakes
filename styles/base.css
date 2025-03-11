@@ -466,9 +466,12 @@ form {
 }
 
 .popular_box video {
-    width: 500px;  
-    height: 500px; 
+    width: 100%;  
+    max-width: 500px; 
+    height: auto;
     object-fit: cover; 
+    display: block;
+    margin: 0 auto;
 
 }
 
