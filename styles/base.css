@@ -58,164 +58,6 @@
     color: var(--text-color);
 }
  
-/* SLIDE SHOW STYLES FOR HOME*/
-
-.slideshow-container {
-    position: relative;
-    margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
-
-img {
-    vertical-align: middle;
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: var(--main-color);
-}
-
-
-
-.numbertext {
-    color: var(--main-color);
-    font-size: 20px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: var(--text-color);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: var(--main-color);
-}
-/* ORDER BUTTON*/
-/* styles.css */
-
-/* Other styles remain the same */
-
-.action-button {
-    position: absolute;
-    bottom: 50px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 10; /* Ensure it is above the slides */
-    transition: background-color 0.3s;
-}
-
-.action-button:hover {
-    background-color: black;
-}
- 
-/*ABOUT US AND TESTIMONIALS SECTIONS*/
-/* styles.css */
-
-/* Other styles for the slideshow and general layout */
-
-section {
-    padding: 40px 20px;
-    margin: 20px 0;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.about-us p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.testimonials .testimonial {
-    margin: 20px auto;
-    max-width: 600px;
-    font-style: italic;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 1;
-}
-
-.testimonials .testimonial:before {
-    content: "“";
-    font-size: 50px;
-    position: absolute;
-    top: -10px;
-    left: 10px;
-    color: var(--third-color);
-}
-
-.testimonials .testimonial:after {
-    content: "”";
-    font-size: 50px;
-    position: absolute;
-    bottom: -10px;
-    right: 10px;
-    color:var(--third-color);
-}
-
 
 /* FOOTER STYLES*/
 footer {
@@ -296,6 +138,15 @@ footer {
 @media (max-width: 768px) {
 
     /* HAMBURGER MENU*/
+
+    header {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+    }
+    
     .toggle-button {
         display: block;
         cursor: pointer;
