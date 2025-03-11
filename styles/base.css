@@ -298,34 +298,54 @@ footer {
     /* HAMBURGER MENU*/
     .toggle-button {
         display: block;
+        cursor: pointer;
+        background-color: none;
+        font-size: 1.5em;
+        padding: 10px;
     }
 
     .navbar-links {
         display: none;
+        position: absolute;
+        top:100%;
+        left:0 ;
         width: 100%;
+        background-color: #574a7e;
+        box-shadow:0px 4px 10px rgba(0, 0, 0, 0.1) ;
         flex-direction: column;
-    }
-
-    .navbar-links ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar-links li {
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    .navbar-links a {
-        font-size: 1.2em;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 1000;
     }
 
     .navbar-links.active {
         display: flex;
     }
 
+    .navbar-links ul {
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        width: 100%;
+        padding:  10px 0;
+    }
+
+    .navbar-links a {
+        font-size: 1.2em;
+        text-decoration: none;
+        color: #a99be3;
+        padding: 10px 0;
+        display: block;
+        width:100% ;
+    }
+
+
     .brand-title{
         font-size: 2em;
+        white-space: nowrap;
     }
 }
 
@@ -546,17 +566,4 @@ background-color: #a287f3;
             transform: scale(1.05);
         }
 
-        @media (max-width: 768px) {
-            body {
-                font-size: 16px; /* Adjust text size */
-            }
-            .container {
-                width: 100%; /* Make sure elements fit within the screen */
-                padding: 10px;
-            }
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        }
-        
+       
