@@ -209,6 +209,42 @@ footer {
         font-size: 2em;
         white-space: nowrap;
     }
+
+
+    .bento_cake {
+        box-shadow: #c8b6ff;
+        border-color: #a287f3;
+        display: inline;              
+        justify-content: center;    
+        align-items: center; 
+        box-shadow: 0 0 50px rgba(0,0,0,0.1);    
+         
+    }
+    
+    .bento_cake img {
+        width: 100%;  
+        height: auto; 
+        object-fit: cover; 
+    
+    }
+    
+    .cup_cakes {
+        box-shadow: #c8b6ff;
+        border-color: #a287f3;
+        display: inline;              
+        justify-content: center;    
+        align-items: center; 
+        box-shadow: 0 0 50px rgba(0,0,0,0.1);    
+         
+    }
+    
+    .cup_cakes img {
+        width: 100%;  
+        height: auto; 
+        object-fit: cover; 
+    
+    }
+
 }
 
 /* Styling the form container */
