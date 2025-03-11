@@ -210,42 +210,35 @@ footer {
         white-space: nowrap;
     }
 
-
-    .bento_cake {
-        box-shadow: #c8b6ff;
-        border-color: #a287f3;
-        display: inline;              
+    .bento_cake, .cup_cakes {
+        max-width: 100%; /* Prevents overflow */
+        width: 100%;
+        display: flex; /* Ensures they adapt */
         justify-content: center;    
         align-items: center; 
-        box-shadow: 0 0 50px rgba(0,0,0,0.1);    
-         
+        box-shadow: 0 0 50px rgba(0,0,0,0.1);
+        overflow: hidden; /* Ensures no extra content spills out */
     }
     
-    .bento_cake img {
+    .bento_cake img, .cup_cakes img {
+        max-width: 100%; /* Ensures they don’t exceed their container */
         width: 100%;  
-        height: auto; 
-        object-fit: cover; 
-    
+        height: auto; /* Keeps aspect ratio */
+        display: block; /* Removes extra spacing issues */
     }
     
-    .cup_cakes {
-        box-shadow: #c8b6ff;
-        border-color: #a287f3;
-        display: inline;              
-        justify-content: center;    
-        align-items: center; 
-        box-shadow: 0 0 50px rgba(0,0,0,0.1);    
-         
-    }
-    
-    .cup_cakes img {
-        width: 100%;  
-        height: auto; 
-        object-fit: cover; 
-    
-    }
 
-}
+        .bento_cake, .cup_cakes {
+            padding: 10px; /* Prevents content from hitting screen edges */
+        }
+        
+        .bento_cake img, .cup_cakes img {
+            max-width: 90%; /* Gives some breathing space */
+        }
+    }
+    
+    
+
 
 /* Styling the form container */
 form {
