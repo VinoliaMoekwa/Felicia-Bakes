@@ -9,7 +9,7 @@
         width: 30%;  /* Each section takes up 30% of the available space on larger screens */
     }
 
-    .popular_cake video,
+    .popular_box video,
     .bento_cake img,
     .cup_cakes img {
         width: 100%;
@@ -31,13 +31,16 @@
     .custom-orders {
         text-align: center;
         padding: 40px;
-        background-color: #f8f1ea;
+        background-color: white;
     }
     
     
     
     .order-button-custom{
-        display:block;
+        display: block;
+        margin: 20px auto;
+        width: 500px;
+        justify-content: center;
         padding: 20px 30px;
         margin-top: 20px;
         background-color:#c8b6ff;
@@ -54,7 +57,9 @@
     }
     
         .custom-orders img {
-            max-width: 40%; /* Large screens */
+            max-width: 500px;
+            border-radius: 70px;
+            padding: 50px; /* Large screens */
         }
 
         .custom-orders {

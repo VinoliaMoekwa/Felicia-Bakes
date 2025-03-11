@@ -222,19 +222,23 @@ footer {
     background-color: var(--secondary-color);
     color: var(--text-color);
     padding: 20px 0;
+    
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-around;
+    display: block;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
+    text-align: center;
 }
 
 .footer-section {
     flex: 1;
     min-width: 250px;
     margin: 10px;
+    text-align: center;
+    
 }
 
 .footer-section h2 {
@@ -244,6 +248,9 @@ footer {
 .footer-section p, .footer-section ul {
     margin: 0;
     padding: 0;
+    display: block;
+    justify-content: center;
+
 }
 
 .footer-section ul {
@@ -265,6 +272,7 @@ footer {
 
 .social-icons {
     display: flex;
+    justify-content: center;
 }
 
 .social-icons a {
@@ -447,7 +455,7 @@ form {
 
 }
 
-.popular_cake {
+.popular_box {
     box-shadow: #c8b6ff;
     border-color: #a287f3;
     display: inline;              
@@ -457,7 +465,7 @@ form {
      
 }
 
-.popular_cake video {
+.popular_box video {
     width: 500px;  
     height: 500px; 
     object-fit: cover; 
@@ -466,15 +474,20 @@ form {
 
 .custom-orders {
     text-align: center;
-    padding: 40px;
-    background-color: #c7a0f3;
+    padding: 10px;
+
+}
+
+.custom-orders h2{
+background-color: #a287f3;
 }
 
 .custom-orders img {
-    max-width: 100%;
+    max-width: 200px;
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
+    border-radius: 40px;
 }
 
 .order-button-custom {
