@@ -225,6 +225,8 @@ footer {
         width: 100%;  
         height: auto; /* Keeps aspect ratio */
         display: block; /* Removes extra spacing issues */
+        justify-content: center;
+    
     }
     
 
@@ -232,12 +234,7 @@ footer {
             padding: 10px; /* Prevents content from hitting screen edges */
         }
         
-        .bento_cake img, .cup_cakes img {
-            max-width: 90%; /* Gives some breathing space */
-            justify-content: center;
-            align-items: center;
-            border-radius: 40px;
-        }
+        
     }
     
     
