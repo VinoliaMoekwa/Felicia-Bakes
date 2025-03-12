@@ -218,6 +218,7 @@ footer {
         align-items: center; 
         box-shadow: 0 0 50px rgba(0,0,0,0.1);
         overflow: hidden; /* Ensures no extra content spills out */
+        text-align: center;
     }
     
     .bento_cake img, .cup_cakes img {
@@ -375,7 +376,8 @@ form {
     display: inline;              
     justify-content: center;    
     align-items: center; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.1);    
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);  
+    text-align: center;  
      
 }
 
