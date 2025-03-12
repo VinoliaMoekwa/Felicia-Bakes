@@ -218,7 +218,7 @@ footer {
         align-items: center; 
         box-shadow: 0 0 50px rgba(0,0,0,0.1);
         overflow: hidden; /* Ensures no extra content spills out */
-        text-align: center;
+        
     }
     
     .bento_cake img, .cup_cakes img {
@@ -235,6 +235,10 @@ footer {
 
         .bento_cake, .cup_cakes {
             padding: 10px; /* Prevents content from hitting screen edges */
+        }
+
+        h2{
+            text-align: center;
         }
         
         
