@@ -346,6 +346,9 @@ form {
     width: 500px;  
     height: 500px; 
     object-fit: cover; 
+    justify-content: center;    
+    align-items: center;
+    border-radius: 40px;
 
 }
 
@@ -363,6 +366,9 @@ form {
     width: 500px;  
     height: 500px; 
     object-fit: cover; 
+    justify-content: center;    
+    align-items: center; 
+    border-radius: 40px;
 
 }
 
@@ -383,6 +389,7 @@ form {
     object-fit: cover; 
     display: block;
     margin: 0 auto;
+    border-radius: 40px;
 
 }
 
