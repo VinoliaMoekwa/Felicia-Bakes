@@ -109,7 +109,7 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .social-icons {

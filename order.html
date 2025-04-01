@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Felicia Bakes</title>
         <meta charset="UTF-8">
         <meta name="author" content="Ntombi Moekwa">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Felicia Bakes</title>
         <meta name="description"
             content="An Online Bakery Store that sells bento Cakes and cupcakes made from scratch at home with love, this website can be used to place orders ">
         <link rel="stylesheet" href="styles/normalize.css">
@@ -20,8 +20,8 @@
          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <meta property="og:title" content="Felicia Bakes Online Store ">
         <meta property="og:type" content="website">
-        <meta property="og: image" content="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.cakezone.com%2Fblog%2Fwp-content%2Fuploads%2F2023%2F09%2Fcreme-n-crumbs-1624620400-845x528.jpg&tbnid=WpD1fGLoCZPFlM&vet=12ahUKEwjg_ubc3pyEAxXyU6QEHSS4CyMQMygJegUIARCNAQ..i&imgrefurl=https%3A%2F%2Fwww.cakezone.com%2Fblog%2Fbento-cakes-the-sweet-revolution-you-need-in-your-life%2F&docid=TRl5PmuXKYl3OM&w=845&h=528&q=bento%20cakes&ved=2ahUKEwjg_ubc3pyEAxXyU6QEHSS4CyMQMygJegUIARCNAQ">
-        <meta property="og: url" content="https://vinoliamoekwa.github.io/feliciabakes/index.html">
+        <meta property="og:image" content="https://vinoliamoekwa.github.io/Felicia-Bakes/images/bento_diy_box.webp">
+        <meta property="og: url" content="https://vinoliamoekwa.github.io/feliciabakes/order.html">
     </head>
     <body>
     
@@ -43,9 +43,10 @@
             </div>
         </nav>
     </header>
+    <main>
 
     <h2> Please fill the form below to place your order</h2>
-      <form id="order-form">
+    <form id="order-form">
         <h3>Customer Information</h3>
         <label for="full-name"> Full Name:</label>
         <input type="text" id="full-name" name="full-name" required>
@@ -57,11 +58,10 @@
         <input type="email" id="email" name="email" required>
 
         <h3>Order Details</h3>
-        <label for="product-type">Type of Baked Good:</label>
-        <select id="product-type" name="product-type">
-          <option value="cake">Cake</option>
-          <option value="cupcake">Cupcakes</option>
-        </select>
+    <label>Type of Baked Good (You can select both):</label><br>
+    <input type="checkbox" id="cake-checkbox" name="product-type" value="cake"> Cake
+    <input type="checkbox" id="cupcake-checkbox" name="product-type" value="cupcake"> Cupcakes
+
       
         <label for="flavor">Flavor Selection:</label>
         <select id ="flavour" name="flavour">
@@ -85,11 +85,36 @@
             <option value="Chocolate Ginache">Chocolate Ginache</option>
         </select>
       
-      
-        <label for="size">Size/Servings:
-        (refer to menu for correct sizing)</label>
-        <input type="number" id="size" name="size" required>
-      
+    
+
+<label for="design-type">Design Type:</label>
+<select id="design-type" name="design-type">
+  <option value="fondant">Fondant</option>
+  <option value="buttercream">Buttercream</option>
+  <option value="icing">Icing</option>
+</select>
+
+<label for="cake-size">Cake Size:</label>
+<select id="cake-size" name="cake-size">
+  <option value="small">Small</option>
+  <option value="medium">Medium</option>
+  <option value="large">Large</option>
+</select>
+
+<label for="cupcake-topping">Cupcake Topping:</label>
+<select id="cupcake-topping" name="cupcake-topping">
+    <option value="">Select Topping</option>
+    <option value="simpleSwirl">Simple Swirl</option>
+    <option value="bespoke">Bespoke</option>
+    <option value="ediblePrint">Edible Print</option>
+    <option value="acrylicTopper">Acrylic Topper</option>
+    <option value="fondant">Fondant</option>
+</select>
+
+<label for="cupcake-quantity">Number of Cupcakes:</label>
+<input type="number" id="cupcake-quantity" min="1" value="1">
+
+
         <label for="design">Design Description:</label>
         <textarea id="design" name="design" required></textarea>
       
@@ -139,6 +164,10 @@
           <input type="checkbox" id="terms" name="terms" required>
           I agree to the terms and conditions
         </label>
+
+        
+<h3>Total Price: R<span id="total-price">0.00</span></h3>
+
       
         <button id="submitOrder" type="submit">Submit Order</button>
 
@@ -146,7 +175,7 @@
       </form>
     <!--Footer-->
 
-    
+    </main>
     <footer>
         <div class="footer-container">
             <div class=" footer-disclamer section">
