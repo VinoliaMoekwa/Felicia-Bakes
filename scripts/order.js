@@ -61,10 +61,21 @@ document.addEventListener("DOMContentLoaded", function () {
   cupcakeTopping.addEventListener("change", calculateTotal);
   cupcakeQuantity.addEventListener("input", calculateTotal);
 
-  // Order Submission
-  if (submitOrderBtn) {
-      submitOrderBtn.addEventListener("click", function (event) {
-          event.preventDefault();
+  // Order Submission 
+
+          document.addEventListener("DOMContentLoaded", function () {
+            const submitOrderBtn = document.getElementById("submitOrder");
+        
+            if (submitOrderBtn) {
+                submitOrderBtn.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    console.log("Button was clicked!");
+        
+                    // Additional logic for order submission can be added here
+                });
+            }
+          
+        
 
           // Retrieve values and save to localStorage
           let name = document.getElementById("full-name").value;
@@ -113,4 +124,4 @@ document.addEventListener("DOMContentLoaded", function () {
           window.location.href = "contact.html";
       });
   }
-});
+);
