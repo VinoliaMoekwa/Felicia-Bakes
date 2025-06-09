@@ -58,6 +58,9 @@
     color: var(--text-color);
 }
  
+.order-h2{
+     text-align: center ;
+}
 
 /* FOOTER STYLES*/
 footer {
