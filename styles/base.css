@@ -443,9 +443,8 @@ background-color: #a287f3;
 
         #contact-container {
             
-            background: linear-gradient(145deg, #c7a0f3, #f79fee); /* Soft pastel gradient */
+            background: linear-gradient(145deg #c7a0f3, white); /* Soft pastel gradient */
             border-radius: 12px;
-            box-shadow: 6px 6px 12px #a99be3, -6px -6px 12px #e5d9ff; /* Soft glowing effect */
             padding:10px;
             width: 90%; /* Makes it responsive */
             max-width: 500px; /* Prevents it from getting too large */
@@ -469,5 +468,23 @@ background-color: #a287f3;
             background:#70629a ;
             transform: scale(1.05);
         }
+
+        .aboutus{
+            background: linear-gradient(145deg #c7a0f3, white); /* Soft pastel gradient */
+            border-radius: 12px;
+            padding:10px;
+            width: 90%; /* Makes it responsive */
+            max-width: 500px; /* Prevents it from getting too large */
+            margin: auto;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .aboutus,h1{
+            text-align: center;
+        }
+
+        
+        
 
        
