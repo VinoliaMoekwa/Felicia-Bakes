@@ -19,7 +19,7 @@ let orderDetails = `
   Dietary: ${orderInfo.order.dietary || "Not provided"}<br>
   Occasion: ${orderInfo.order.occasion || "Not provided"}<br>
   Event Date: ${orderInfo.order.eventDate || "Not provided"}<br>
-  Special Instructions: ${orderInfo.order.specialInstructions || "Not provided"}
+
 `;
 
 // Now display orderDetails in your HTML as needed
