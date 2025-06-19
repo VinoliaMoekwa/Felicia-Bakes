@@ -22,6 +22,18 @@ let orderDetails = `
 
 `;
 
+// For WhatsApp (plain text)
+let orderDetailsText = 
+  `Product Type: ${productType || "Not provided"}\n` +
+  `Flavour: ${orderInfo.order.flavour || "Not provided"}\n` +
+  `Filling: ${orderInfo.order.filling || "Not provided"}\n` +
+  `Size: ${orderInfo.order.cakeSize || "Not provided"}\n` +
+  `Design: ${orderInfo.order.designType || "Not provided"}\n` +
+  `Color Scheme: ${orderInfo.order.colorScheme || "Not provided"}\n` +
+  `Message: ${orderInfo.order.message || "Not provided"}\n` +
+  `Dietary: ${orderInfo.order.dietary || "Not provided"}\n` +
+  `Occasion: ${orderInfo.order.occasion || "Not provided"}\n` +
+  `Event Date: ${orderInfo.order.eventDate || "Not provided"}\n`;
 // Now display orderDetails in your HTML as needed
 document.getElementById("full-name").textContent = orderInfo.name || "Not provided";
 document.getElementById("email").textContent = orderInfo.email || "Not provided";
