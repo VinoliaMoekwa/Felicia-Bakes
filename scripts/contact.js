@@ -1,3 +1,9 @@
+let orderInfo = JSON.parse(localStorage.getItem("orderInfo") || "{}");
+if (!orderInfo || !orderInfo.order) {
+  alert("No order information found. Please fill in the order form first.");
+  window.location.href = "order.html";
+}
+
 let productType = "";
 if (orderInfo.order?.cakeSelected) productType += "Cake ";
 if (orderInfo.order?.cupcakeSelected) productType += "Cupcakes";
@@ -16,7 +22,8 @@ let orderDetails = `
   Special Instructions: ${orderInfo.order.specialInstructions || "Not provided"}
 `;
 
-if (!orderInfo || !orderInfo.order) {
-  alert("No order information found. Please fill in the order form first.");
-  window.location.href = "order.html"; // Optional redirect
-}
+// Now display orderDetails in your HTML as needed
+document.getElementById("full-name").textContent = orderInfo.name || "Not provided";
+document.getElementById("email").textContent = orderInfo.email || "Not provided";
+document.getElementById("orderDetails").innerHTML = orderDetails;
+
