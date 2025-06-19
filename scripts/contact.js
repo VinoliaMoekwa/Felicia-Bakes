@@ -27,3 +27,9 @@ document.getElementById("full-name").textContent = orderInfo.name || "Not provid
 document.getElementById("email").textContent = orderInfo.email || "Not provided";
 document.getElementById("orderDetails").innerHTML = orderDetails;
 
+document.getElementById("sendWhatsapp").addEventListener("click", function () {
+  const phoneNumber = "27813315267"; // Use country code, e.g. 27 for South Africa
+  const message = `Hello, my name is ${orderInfo.name}.\nEmail: ${orderInfo.email}\n\nOrder Details:\n${orderDetails}`;
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, "_blank");
+});
