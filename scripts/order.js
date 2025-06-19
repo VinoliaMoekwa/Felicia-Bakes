@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const dietary = document.getElementById("dietary").value;
             const occasion = document.getElementById("occasion").value;
             const eventDate = document.getElementById("event-date").value;
-            const specialInstructions = document.getElementById("special-instructions").value;
+            
 
             if (!name || !email || (!cakeSelected && !cupcakeSelected) || !flavour || !filling || !occasion || !eventDate) {
                 alert("Please fill in all the required fields.");
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 dietary,
                 occasion,
                 eventDate,
-                specialInstructions
+                
             };
 
             const orderInfo = { name, email, order };
