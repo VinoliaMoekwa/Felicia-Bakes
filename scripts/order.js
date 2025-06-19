@@ -25,23 +25,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // --- CALCULATOR LOGIC ---
     function calculateTotal() {
-        let totalPrice = 0;
-        if (cakeCheckbox.checked) {
-            const size = cakeSize.value;
-            const design = designType.value;
-            if (size && design) {
-                totalPrice += cakePrices[size][design] || 0;
-            }
+    let totalPrice = 0;
+    if (cakeCheckbox.checked) {
+        const size = cakeSize.value;
+        const design = designType.value;
+        if (
+            size !== "selectoption" &&
+            design !== "selectoption" &&
+            cakePrices[size] &&
+            cakePrices[size][design]
+        ) {
+            totalPrice += cakePrices[size][design];
         }
-        if (cupcakeCheckbox.checked) {
-            const topping = cupcakeTopping.value;
-            const quantity = parseInt(cupcakeQuantity.value) || 0;
-            if (topping && quantity > 0) {
-                totalPrice += (cupcakePrices[topping] || 0) * quantity;
-            }
-        }
-        totalPriceElement.textContent = totalPrice.toFixed(2);
     }
+    if (cupcakeCheckbox.checked) {
+        const topping = cupcakeTopping.value;
+        const quantity = parseInt(cupcakeQuantity.value) || 0;
+        if (topping && quantity > 0 && cupcakePrices[topping]) {
+            totalPrice += cupcakePrices[topping] * quantity;
+        }
+    }
+    totalPriceElement.textContent = totalPrice.toFixed(2);
+}
 
     // --- CALCULATOR EVENT LISTENERS ---
     [cakeCheckbox, cupcakeCheckbox, cakeSize, designType, cupcakeTopping, cupcakeQuantity].forEach(element => {
