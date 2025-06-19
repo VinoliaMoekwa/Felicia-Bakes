@@ -1,72 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Cake pricing
-    const cakePrices = {
-        small: { fondant: 450, buttercream: 350, icing: 350 },
-        medium: { fondant: 900, buttercream: 850, icing: 850 },
-        large: { fondant: 1200, buttercream: 950, icing: 950 }
-    };
+    // ...existing code...
 
-    const cupcakePrices = {
-        simpleSwirl: 25,
-        bespoke: 30,
-        ediblePrint: 35,
-        acrylicTopper: 40,
-        fondant: 35
-    };
-
-    const cakeCheckbox = document.getElementById("cake-checkbox");
-    const cupcakeCheckbox = document.getElementById("cupcake-checkbox");
-    const cakeSize = document.getElementById("cake-size");
-    const designType = document.getElementById("design-type");
-    const cupcakeTopping = document.getElementById("cupcake-topping");
-    const cupcakeQuantity = document.getElementById("cupcake-quantity");
-    const totalPriceElement = document.getElementById("total-price");
-    const submitOrderBtn = document.getElementById("submitOrder");
-
-    function calculateTotal() {
-        let totalPrice = 0;
-
-        if (cakeCheckbox.checked) {
-            const size = cakeSize.value;
-            const design = designType.value;
-            if (size && design) {
-                totalPrice += cakePrices[size][design] || 0;
-            }
-        }
-
-        if (cupcakeCheckbox.checked) {
-            const topping = cupcakeTopping.value;
-            const quantity = parseInt(cupcakeQuantity.value) || 0;
-            if (topping && quantity > 0) {
-                totalPrice += (cupcakePrices[topping] || 0) * quantity;
-            }
-        }
-
-        totalPriceElement.textContent = totalPrice.toFixed(2);
-    }
-
-    // Event listeners for dynamic calculation
-    [cakeCheckbox, cupcakeCheckbox, cakeSize, designType, cupcakeTopping, cupcakeQuantity].forEach(element =>
-        element.addEventListener("change", calculateTotal)
-    );
-    cupcakeQuantity.addEventListener("input", calculateTotal);
-
-    // Handle order submission
-    if (submitOrderBtn) {
-        submitOrderBtn.addEventListener("click", function (event) {
+    const orderForm = document.getElementById("order-form");
+    if (orderForm) {
+        orderForm.addEventListener("submit", function (event) {
             event.preventDefault();
-            console.log("Button was clicked!");
-
+            // ...move your order submission code here...
             const name = document.getElementById("full-name").value;
             const email = document.getElementById("email").value;
+            const cakeCheckbox = document.getElementById("cake-checkbox");
+            const cupcakeCheckbox = document.getElementById("cupcake-checkbox");
             const cakeSelected = cakeCheckbox.checked;
             const cupcakeSelected = cupcakeCheckbox.checked;
-            const flavour = document.getElementById("flavor").value;
+            const flavour = document.getElementById("flavour").value;
             const filling = document.getElementById("filling").value;
-            const cakeSizeVal = cakeSize.value;
-            const designTypeVal = designType.value;
-            const cupcakeToppingVal = cupcakeTopping.value;
-            const cupcakeQuantityVal = cupcakeQuantity.value;
+            const cakeSizeVal = document.getElementById("cake-size").value;
+            const designTypeVal = document.getElementById("design-type").value;
+            const cupcakeToppingVal = document.getElementById("cupcake-topping").value;
+            const cupcakeQuantityVal = document.getElementById("cupcake-quantity").value;
             const colorScheme = document.getElementById("color-scheme").value;
             const message = document.getElementById("message").value;
             const dietary = document.getElementById("dietary").value;
@@ -103,4 +54,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
