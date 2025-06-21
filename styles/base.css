@@ -11,14 +11,30 @@
 }/* BODY STYLES*/
  body{
     color: var(--text-color);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--main-color)
 }
+
+/* Make headings curly and feminine */
+h1, h2, h3, nav, .header-title {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Optional: Make it feel more elegant */
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h2, h3 {
+  font-weight: 500;
+}
 /* NAVBAR STYLES*/
 .navbar {
     display: flex;
+    font-family:'Dancing Script', cursive ;
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
@@ -26,6 +42,18 @@
     color: var(--text-color);
     
 }
+
+button {
+  border-radius: 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #eecff1; /* soft pink hover */
+  transition: 0.3s ease;
+}
+
 
 .brand-title {
     font-size: 2.5em;
