@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cupcakeQuantity) cupcakeQuantity.addEventListener("input", calculateTotal);
 
     // Get the total price from the calculator
-const totalPrice = document.getElementById("total-price").textContent;
+
 
 
     // --- ORDER SUBMISSION LOGIC ---
@@ -85,6 +85,8 @@ const totalPrice = document.getElementById("total-price").textContent;
                 return;
             }
 
+            const totalPrice = document.getElementById("total-price").textContent;
+            
             const order = {
                 cakeSelected,
                 cupcakeSelected,
