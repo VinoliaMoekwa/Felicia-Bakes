@@ -90,6 +90,56 @@ button:hover {
      text-align: center ;
 }
 
+nav a {
+  color: #8e44ad; /* match your purple theme */
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+
+nav a:hover {
+  color: #d36bc4; /* soft pink hover */
+  transform: scale(1.05);
+  text-shadow: 1px 1px 3px rgba(211, 107, 196, 0.2);
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffc0e4; /* pastel pink for contrast */
+}
+
+button, .btn {
+  background-color: #d36bc4;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #b35ca7;
+  box-shadow: 0 4px 8px rgba(179, 92, 167, 0.4);
+  transform: scale(1.03);
+}
+
+
+footer {
+  background: #b388eb; /* soft purple */
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+
 /* FOOTER STYLES*/
 footer {
     background-color: var(--secondary-color);
