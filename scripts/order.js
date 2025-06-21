@@ -54,6 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     if (cupcakeQuantity) cupcakeQuantity.addEventListener("input", calculateTotal);
 
+    // Get the total price from the calculator
+const totalPrice = document.getElementById("total-price").textContent;
+
+
     // --- ORDER SUBMISSION LOGIC ---
     if (orderForm) {
         orderForm.addEventListener("submit", function (event) {
@@ -95,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 dietary,
                 occasion,
                 eventDate,
+                totalPrice,
                 
             };
 
