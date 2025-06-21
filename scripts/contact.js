@@ -19,6 +19,7 @@ let orderDetails = `
   Dietary: ${orderInfo.order.dietary || "Not provided"}<br>
   Occasion: ${orderInfo.order.occasion || "Not provided"}<br>
   Event Date: ${orderInfo.order.eventDate || "Not provided"}<br>
+  <strong>Total Price: R${orderInfo.order.totalPrice || "0.00"}</strong><br>
 
 `;
 
@@ -33,7 +34,9 @@ let orderDetailsText =
   `Message: ${orderInfo.order.message || "Not provided"}\n` +
   `Dietary: ${orderInfo.order.dietary || "Not provided"}\n` +
   `Occasion: ${orderInfo.order.occasion || "Not provided"}\n` +
-  `Event Date: ${orderInfo.order.eventDate || "Not provided"}\n`;
+  `Event Date: ${orderInfo.order.eventDate || "Not provided"}\n`+
+  `Total Price: R${orderInfo.order.totalPrice || "0.00"}\n`;
+  
 // Now display orderDetails in your HTML as needed
 document.getElementById("full-name").textContent = orderInfo.name || "Not provided";
 document.getElementById("email").textContent = orderInfo.email || "Not provided";
