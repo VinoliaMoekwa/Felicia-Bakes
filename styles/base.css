@@ -18,9 +18,11 @@
 }
 
 /* Make headings curly and feminine */
-h1, h2, h3, nav, .header-title {
-  font-family: 'Dancing Script', cursive;
+h1, h2, h3{
+    font-family: 'Quicksand';
+  
 }
+
 
 /* Optional: Make it feel more elegant */
 h1 {
@@ -32,9 +34,9 @@ h2, h3 {
   font-weight: 500;
 }
 /* NAVBAR STYLES*/
-.navbar {
+.navbar,.brand-title {
     display: flex;
-    font-family:'Dancing Script', cursive ;
+    font-family:'Dancing Script',cursive ;
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
