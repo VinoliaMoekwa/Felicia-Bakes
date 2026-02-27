@@ -12,8 +12,8 @@
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/medium.css">
         <link rel="stylesheet" href="styles/larger.css">
-        <link rel="icon" href="/images/logo-transparent.png">
-        <!--Fonts-->
+        <link rel="icon" href="/images/feliciabakesfavicon.png">
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -22,12 +22,12 @@
          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
         <meta property="og:title" content="Felicia Bakes Online Store ">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="https://vinoliamoekwa.github.io/Felicia-Bakes/images/bento_diy_box.webp">
-        <meta property="og: url" content="https://vinoliamoekwa.github.io/feliciabakes/contact.html">
+        <meta property="og: image" content="https://vinoliamoekwa.github.io/Felicia-Bakes/images/bento_diy_box.webp">
+        <meta property="og: url" content="https://vinoliamoekwa.github.io/feliciabakes/index.html">
     </head>
     <body>
         <!-- Header Section -->
-        <header class="hero-page">
+        <header class="header">
             <div class="logo">
                 <!-- Logo image would go here -->
                 <img src="images/logo-transparent.png" alt="Felicia Bakes Logo">
@@ -37,8 +37,8 @@
         <!-- Navigation -->
         <nav class="navigation">
             <a href="index.html" class="nav-link active">Home</a>
-            <a href="minitreats.html" class="nav-link">Mini Treats</a>
-            <a href="bentocakes.html" class="nav-link">Bento Cakes</a>
+            <a href="mini_treats.html" class="nav-link">Mini Treats</a>
+            <a href="bento_cakes.html" class="nav-link">Bento Cakes</a>
             <a href="order.html" class="nav-link">Order</a>
             <a href="contact.html" class="nav-link">Contact Us</a>
         </nav>
@@ -62,24 +62,21 @@
                 </svg>
             </div>
         </div>
-    <main>
-    <div id="contact-container">
-    <h2>Contact US</h2>
 
-    <div class="disclaimer">
-        <p>Please note: This is just a qoute, the final price may vary because of the ingredients and design</p>
-      </div>
-
-    <p> Please review your order before sending it via Whatsapp</p>
-    
-    <p><strong>Name:</strong><span id="full-name" ></span></p>
-    <p><strong>Email:</strong><span id="email"></span></p>
-    <p><strong>Order:</strong><span id="orderDetails"></span></p>
-    
-    
-    <button id="sendWhatsapp">Message Us on WhatsApp</button>
-</div>
-    </main>
-   
-    <!--Footer-->
-    
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="brand-name">FELICIA BAKES</h1>
+                <p class="tagline">EVERYTHING SWEET & PRETTY</p>
+                <button class="cta-button">ORDER NOW</button>
+            </div>
+            <div class="hero-image">
+                <!-- Cake image would go here -->
+                <img src="images/hero-image.jpeg" alt="hero image">
+            </div>
+        </section>
+        
+        
+    <script src="scripts/index.js"></script>
+</body>
+</html>
