@@ -756,11 +756,22 @@ justify-content: center;
 
   /* ================= GRIDS ================= */
 
+  .cake-title {
+    font-size: 1rem;
+  }
+
   .testimonial-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
+  .testimonial-title{
+    font-size: 1rem;
+  }
+
+  .treats-title{
+    font-size: 1rem;
+  }
   .mini-treats {
     padding: 40px 16px; /* space around section */
     box-sizing: border-box;
@@ -806,7 +817,9 @@ justify-content: center;
   }
 
  
-
+.about-title {
+    font-size: 1rem;
+  }
 
   .about-text {
     font-size: 15px;
