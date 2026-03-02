@@ -820,10 +820,10 @@ background-color: #a287f3;
   }
 
   .hamburger span {
-    height: 3px;
-    width: 100%;
+    height: 1px;
+    width: 50px;
     background-color: #ff6098;
-    border-radius: 2px;
+    border-radius: 1px;
   }
 
   /* Mobile nav dropdown */
