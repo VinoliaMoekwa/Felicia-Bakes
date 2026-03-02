@@ -800,9 +800,6 @@ justify-content: center;
 }
 
 /* Cards */
-.treat-card {
-    padding: 16px;  /* smaller padding */
-}
 
 .treat-card img {
     height: 100px;  /* smaller images */
