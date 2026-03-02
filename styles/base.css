@@ -786,7 +786,7 @@ justify-content: center;
 }
 
 .treats-heading__underline {
-    width: 80px; /* smaller underline */
+    width: 120px; /* smaller underline */
     margin-bottom: 40px;
 }
 
@@ -805,7 +805,7 @@ justify-content: center;
 }
 
 .treat-card img {
-    height: 180px;  /* smaller images */
+    height: 100px;  /* smaller images */
     border-radius: 12px;
 }
 
