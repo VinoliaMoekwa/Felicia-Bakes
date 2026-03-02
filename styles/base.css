@@ -766,9 +766,14 @@ background-color: #a287f3;
             color:#C97A6D;
         }
 
+
+        /* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+}
         
-        /* ================================= */
-/* ✅ MOBILE FIXES */
+/* ================================= */
+/* ✅ MOBILE VIEW — CLEAN VERSION */
 /* ================================= */
 @media (max-width: 768px) {
 
@@ -786,12 +791,17 @@ background-color: #a287f3;
 
   .header {
     height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
   }
 
+  /* Logo */
   .logo {
     position: static;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 
   .logo img {
@@ -799,50 +809,59 @@ background-color: #a287f3;
     height: auto;
   }
 
-  /* Stack header content */
-  .header {
+  /* Social icons inside header flow */
+  .social-icons {
+    position: static;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
+    gap: 12px;
+    margin-left: auto;
   }
 
-  /* Hide desktop navigation */
-  .navigation {
-    display: none;
+  .social-icons i {
+    font-size: 20px;
   }
 
-  /* Show hamburger */
+  /* ================= HAMBURGER ================= */
+
   .hamburger {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 12px;
   }
 
-  /* Mobile nav menu */
-  .nav-links {
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    background-color: #ff6098;
+    border-radius: 2px;
+  }
+
+  /* ================= MOBILE NAV ================= */
+
+  .navigation {
     display: none;
     flex-direction: column;
-    background-color: #ff6098;
-    width: 100%;
     position: absolute;
     top: 90px;
     left: 0;
-    text-align: center;
-    border-radius: 0;
+    width: 100%;
+    background: #ff6098;
     padding: 10px 0;
+    text-align: center;
+    z-index: 999;
   }
 
-  .nav-links.show {
+  .navigation.show {
     display: flex;
   }
 
   .nav-link {
     font-size: 18px;
-    padding: 12px 0;
-  }
-
-  .social-icons {
-    position: static;
-    gap: 12px;
+    padding: 14px 0;
   }
 
   /* ================= HERO ================= */
@@ -897,34 +916,4 @@ background-color: #a287f3;
     flex-direction: column;
     text-align: center;
   }
-
-  /* Hide hamburger on desktop */
-.hamburger {
-  display: none;
 }
-
-/* Show on mobile */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 22px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 30px;
-  }
-
-  .hamburger span {
-    height: 3px;
-    width: 100%;
-    background-color: #ff6098;
-    border-radius: 2px;
-  }
-}
-
-}
-
-       
