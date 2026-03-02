@@ -787,42 +787,32 @@ background-color: #a287f3;
     padding: 0 16px;
   }
 
-  /* ================= HEADER ================= */
+ @media (max-width: 768px) {
 
   .header {
-    height: 90px;
+    height: auto;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
+    flex-direction: column;
+    padding: 10px 16px;
+    gap: 10px;
   }
 
-  /* Logo */
+  /* Top row: logo + icons */
   .logo {
     position: static;
     width: 70px;
     height: 70px;
   }
 
-  .logo img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Social icons inside header flow */
   .social-icons {
-    position: static;
+    position: absolute;
+    right: 16px;
+    top: 16px;
     display: flex;
     gap: 12px;
-    margin-left: auto;
   }
 
-  .social-icons i {
-    font-size: 20px;
-  }
-
-  /* ================= HAMBURGER ================= */
-
+  /* Hamburger under logo */
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -830,7 +820,7 @@ background-color: #a287f3;
     width: 26px;
     height: 20px;
     cursor: pointer;
-    margin-left: 12px;
+    margin-top: 4px;
   }
 
   .hamburger span {
@@ -840,32 +830,21 @@ background-color: #a287f3;
     border-radius: 2px;
   }
 
-  /* ================= MOBILE NAV ================= */
-
+  /* Mobile nav dropdown */
   .navigation {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 90px;
-    left: 0;
     width: 100%;
     background: #ff6098;
     padding: 10px 0;
     text-align: center;
-    z-index: 999;
   }
 
   .navigation.show {
     display: flex;
   }
 
-  .nav-link {
-    font-size: 18px;
-    padding: 14px 0;
-  }
-
-  /* ================= HERO ================= */
-
+}
   .hero {
     flex-direction: column;
     height: auto;
