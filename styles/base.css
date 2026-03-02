@@ -619,109 +619,9 @@ justify-content: center;
     padding: 8px;
   }
   
-/*  Upadated Home page */
-
- 
-.bento_cake {
-    box-shadow: #c8b6ff;
-    border-color: #a287f3;
-    display: inline;              
-    justify-content: center;    
-    align-items: center; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.1);    
-     
-}
-
-.bento_cake img {
-    width: 500px;  
-    height: 500px; 
-    object-fit: cover; 
-    
-}
-
-.cup_cakes {
-    box-shadow: #c8b6ff;
-    border-color: #a287f3;
-    display: inline;              
-    justify-content: center;    
-    align-items: center; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.1);    
-     
-}
-
-.cup_cakes img {
-    width: 500px;  
-    height: 500px; 
-    object-fit: cover; 
-    
-
-}
-
-.popular_box {
-    box-shadow: #c8b6ff;
-    border-color: #a287f3;
-    display: inline;              
-    justify-content: center;    
-    align-items: center; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.1);  
-    text-align: center;  
-     
-}
-
-.popular_box video {
-    width: 90%;  
-    max-width: 500px; 
-    height: auto;
-    object-fit: cover; 
-    display: block;
-    margin: 0 auto;
-    border-radius: 40px;
-    padding: 20px;
-
-}
-
-.custom-orders {
-    text-align: center;
-    padding: 10px;
-
-}
-
-.custom-orders h2{
-background-color: #a287f3;
-}
-
-.custom-orders img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-    border-radius: 40px;
-}
-
-.order-button-custom {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 15px;
-    background-color:#c8b6ff;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.order-button-custom:hover {
-    background-color:#a88ff3 ;
-}
-
-/* Styling the contact page */
-
-
-        
-
         
         
-
+/*Contact form container */
         #contact-container {
             
             background: linear-gradient(145deg #c7a0f3, white); /* Soft pastel gradient */
@@ -881,6 +781,41 @@ background-color: #a287f3;
     font-size: 1.6rem;
   }
 
+  .mini-treats {
+    padding: 40px 16px; /* smaller padding */
+}
+
+.treats-heading__underline {
+    width: 80px; /* smaller underline */
+    margin-bottom: 40px;
+}
+
+/* Grid layout: 1 column */
+.mini-treats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px; /* smaller gap */
+    max-width: 100%; /* full width on mobile */
+    margin: 0 auto;
+}
+
+/* Cards */
+.treat-card {
+    padding: 16px;  /* smaller padding */
+}
+
+.treat-card img {
+    height: 180px;  /* smaller images */
+    border-radius: 12px;
+}
+
+.treat-card h3 {
+    font-size: 18px; /* slightly smaller headings */
+}
+
+.treat-card p {
+    font-size: 13px; /* slightly smaller text */
+}
   .about-text {
     font-size: 15px;
   }
