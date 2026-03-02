@@ -781,38 +781,9 @@ justify-content: center;
     font-size: 1.6rem;
   }
 
-  .mini-treats {
-    padding: 40px 16px; /* smaller padding */
-}
+ 
 
-.treats-heading__underline {
-    width: 120px; /* smaller underline */
-    margin-bottom: 40px;
-}
 
-/* Grid layout: 1 column */
-.mini-treats-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px; /* smaller gap */
-    max-width: 100%; /* full width on mobile */
-    margin: 0 auto;
-}
-
-/* Cards */
-
-.treat-card img {
-    height: 100px;  /* smaller images */
-    border-radius: 12px;
-}
-
-.treat-card h3 {
-    font-size: 18px; /* slightly smaller headings */
-}
-
-.treat-card p {
-    font-size: 13px; /* slightly smaller text */
-}
   .about-text {
     font-size: 15px;
   }
