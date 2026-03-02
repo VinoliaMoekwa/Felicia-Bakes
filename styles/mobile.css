@@ -1,0 +1,119 @@
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  /* Header */
+  .header {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 16px;
+    gap: 10px;
+  }
+
+  .logo {
+    position: static;
+    width: 70px;
+    height: 70px;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  /* Hamburger menu under logo */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 2px;
+  }
+
+  .hamburger span {
+    height: 1px;
+    width: 50%;
+    background-color: #ff6098;
+    border-radius: 1px;
+  }
+
+  /* Mobile navigation dropdown */
+  .navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #ff6098;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .navigation.show {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: auto;
+    transform: rotate(0deg);
+  }
+
+  .brand-name {
+    font-size: 28px;
+  }
+
+  /* Grids stacked */
+  .testimonial-grid,
+  .mini-treats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .treat-card {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .treat-card img {
+    width: 100%;
+    height: 220px;
+  }
+
+  /* Typography */
+  .testimonial-title,
+  .treats-title,
+  .cake-title,
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

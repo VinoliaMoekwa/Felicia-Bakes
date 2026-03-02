@@ -1,10 +1,15 @@
-/* Reset and Base Styles */
+/* ============================= */
+/* BASE.CSS — DESKTOP FIRST STYLES */
+/* ============================= */
+
+/* Reset and Box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body & Container */
 body {
     font-family: 'Istok Web', sans-serif;
     background-color: #ffc7d7;
@@ -18,7 +23,9 @@ body {
     background-color: #fff3f6;
 }
 
+/* ============================= */
 /* Header Styles */
+/* ============================= */
 .header {
     position: sticky;
     top: 0;
@@ -26,12 +33,10 @@ body {
     width: 100%;
     height: 150px;
     background-color: white;
-    box-shadow: 0px 4px 4px -1px rgba(12, 12, 13, 0.1), 
+    box-shadow: 0px 4px 4px -1px rgba(12, 12, 13, 0.1),
                 0px 4px 4px -1px rgba(12, 12, 13, 0.05);
-     z-index: 1000; /* ensures header stays on top */
-
-}           
-
+    z-index: 1000;
+}
 
 .logo {
     position: absolute;
@@ -47,17 +52,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'IBM Plex Serif', serif;
-    
 }
 
-
-/* Navigation Styles */
 .navigation {
     position: absolute;
     top: 51px;
-    left: 50%;               /* move left edge to center */
-    transform: translateX(-50%); /* shift back half width to center */
+    left: 50%;
+    transform: translateX(-50%);
     width: 824px;
     height: 64px;
     background-color: #ff6098;
@@ -67,6 +68,7 @@ body {
     justify-content: space-around;
     padding: 0 50px;
 }
+
 .nav-link {
     font-family: 'Istok Web', sans-serif;
     font-size: 24px;
@@ -89,108 +91,44 @@ body {
     right: 58px;
     top: 70px;
     display: flex;
-    gap: 20px; /* space between icons */
+    gap: 20px;
     align-items: center;
 }
 
-/* Individual icons inside links */
 .social-icons i {
-    font-size: 24px;       /* controls icon size */
-    color: #eb1761;        /* pink by default */
+    font-size: 24px;
+    color: #eb1761;
     cursor: pointer;
     transition: transform 0.3s, color 0.3s;
 }
 
-/* Hover effect */
 .social-icons i:hover {
     transform: scale(1.1);
-    color: #a287f3; /* lighter purple on hover */
+    color: #a287f3;
 }
 
-/* Mobile Header Adjustments */
-@media (max-width: 768px) {
-
-  /* Container for logo + social icons stays horizontal */
-  .logo-icons {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px; /* space between logo and icons */
-  }
-
-  /* Hamburger menu appears on mobile */
-  .hamburger {
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 22px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 30px;
-  }
-
-  .hamburger span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: #ff6098; /* matches nav bg */
-    border-radius: 2px;
-    transition: 0.3s;
-  }
-
-  /* Hide nav links by default on mobile */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #ff6098;
-    width: 100%;
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px 0;
-    position: absolute;
-    top: 70px; /* below header */
-    left: 0;
-    z-index: 100;
-  }
-
-  /* Show nav links when hamburger toggled */
-  .nav-links.show {
-    display: flex;
-  }
-
-  /* Adjust link sizes for mobile */
-  .nav-link {
-    padding: 10px 0;
-    font-size: 18px;
-  }
-}
+/* ============================= */
 /* Hero Section */
+/* ============================= */
 .hero {
-    display: flex; /* side by side layout */
-    justify-content: center; /* brand+CTA on left, image on right */
+    display: flex;
+    justify-content: center;
     align-items: center;
     gap: 40px;
-    align-items: center; /* vertical centering */
-    background-color: #fff5f8; /* very pale pink */
+    background-color: #fff5f8;
     height: 431px;
-    padding: 0 50px; /* space from edges */
+    padding: 0 50px;
     position: relative;
     box-shadow: 0px 4px 4px -1px rgba(12,12,13,0.1),
                 0px 4px 4px -1px rgba(12,12,13,0.05);
 }
 
-/* Left side: brand, tagline, button */
 .hero-content {
     display: flex;
     flex-direction: column;
-    gap: 16px; /* space between brand/tag/button */
+    gap: 16px;
 }
 
-/* Brand name */
 .brand-name {
     font-family: 'IBM Plex Serif', serif;
     font-size: 36px;
@@ -198,7 +136,6 @@ body {
     font-weight: bold;
 }
 
-/* Tagline */
 .tagline {
     font-family: 'Istok Web', sans-serif;
     font-size: 16px;
@@ -206,7 +143,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* CTA button */
 .cta-button {
     background-color: #ffc7d7;
     border: none;
@@ -225,9 +161,8 @@ body {
     box-shadow: 0px 6px 6px rgba(0,0,0,0.3);
 }
 
-/* Right side: hero image */
 .hero-image {
-    flex-shrink: 0; /* prevents image from shrinking */
+    flex-shrink: 0;
 }
 
 .hero-image img {
@@ -239,343 +174,334 @@ body {
     object-fit: cover;
 }
 
-
 /* ============================= */
 /* Testimonials Section */
 /* ============================= */
-
-
+.testimonial-heading__underline,
+.cake-heading__underline {
+    width: 120px;
+    height: 4px;
+    margin: 0 auto 2.5rem;
+    border-radius: 2px;
+}
 
 .testimonial-heading__underline {
-  width: 120px;
-  height: 4px;
-  background-color: #4A0983;
-  margin: 0 auto 2.5rem;
-  border-radius: 2px;
+    background-color: #4A0983;
 }
 
 .cake-heading__underline {
-  width: 120px;
-  height: 4px;
-  background-color: #FF4084;
-  margin: 0 auto 2.5rem;
-  border-radius: 2px;
+    background-color: #FF4084;
 }
 
-
-/* Section wrapper */
 .testimonials {
-  padding: 60px 20px;
-  text-align: center;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* Title styling */
-.testimonial-title {
-  color: #4A0983; 
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 60px;   /* adds space above */
-}
-
-.treats-title {
-  color: #84002E; 
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 60px;   /* adds space above */
-}
+.testimonial-title,
+.treats-title,
 .cake-title {
-  color: #FF4084; 
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 60px;   /* adds space above */
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 60px;
 }
 
-/* Grid layout */
 .testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  max-width: 1100px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* Individual cards */
 .testimonial-card {
-  background: #510594;        /* soft purple */
-  border: 2px solid white;  /* light border */
-  padding: 24px;
-  border-radius: 12px;
-  text-align: left;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  color: white;
+    background: #510594;
+    border: 2px solid white;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    color: white;
 }
 
 .testimonial-card h4 {
-  margin-top: 16px;
-  font-weight: 600;
+    margin-top: 16px;
+    font-weight: 600;
 }
 
+/* ============================= */
+/* Cake Collection / Swiper Section */
+/* ============================= */
+
+/* Section Title */
+.cake-title {
+    color: #FF4084; /* bright pink/purple */
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+/* Underline below title */
+.cake-heading__underline {
+    width: 120px;
+    height: 4px;
+    background-color: #FF4084;
+    margin: 0 auto 60px;
+    border-radius: 2px;
+}
+
+/* Swiper slider container */
 .cake-slider {
-  width: 100%;
-  max-width: 1200px; /* controls overall slider width */
-  margin: 0 auto;     /* center it */
-  padding: 40px 20px;
-  overflow: visible;  /* so buttons aren’t cut off */
-  position: relative;
+    width: 100%;
+    max-width: 1200px; /* keeps it from stretching too far */
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    overflow: visible;
 }
 
+/* Swiper wrapper (slides container) */
 .swiper {
-  width: 70%;
+    width: 100%;
 }
 
+/* Individual slides */
 .swiper-slide {
-display: flex;
-justify-content: center;
-
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .swiper-slide img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border-radius: 20px;
-  object-fit: cover;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
+/* Swiper navigation buttons */
 .swiper-button-prev,
 .swiper-button-next {
-  color:  #ffc7d7;               /* change to any color you want */
-  width: 40px;                /* button width */
-  height: 40px;               /* button height */
-  border-radius: 50%;         /* makes it circular */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 50%;                   /* vertical center */
-  transform: translateY(-50%);
-  z-index: 10;
-  transition: all 0.3s ease;
+    color: #ffc7d7; /* pastel pink arrows */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: all 0.3s ease;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  color: #ffc7d7; /* accent hover color */
-  background-color: rgba(255,255,255,0.2); /* optional hover bg */
+    background-color: rgba(255, 255, 255, 0.2); /* subtle hover */
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  color: #ff6098 !important;
+    color: #ff6098 !important; /* pink arrow color */
+    font-size: 20px; /* adjust arrow size */
 }
-
 /* ============================= */
 /* Mini Treats Section */
 /* ============================= */
-
 .mini-treats {
-  padding: 60px 20px;
-  text-align: center;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .treats-heading__underline {
-  width: 120px;
-  height: 4px;
-  background-color: #84002E;
-  margin: 0 auto 2.5rem;
-  border-radius: 2px;
-  margin-bottom: 60px; /* adds space below the underline */
+    width: 120px;
+    height: 4px;
+    background-color: #84002E;
+    margin: 0 auto 2.5rem;
+    border-radius: 2px;
+    margin-bottom: 60px;
 }
 
-
-/* Grid layout */
 .mini-treats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  max-width: 1100px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* Cards */
 .treat-card {
-  background: #fff5f8;
-  border-radius: 20px;
+    background: #fff5f8;
+    border-radius: 20px;
     border: 1px solid #84002E;
-  padding: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .treat-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 15px;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 
-
-
-
 .treat-card h3 {
-  color: #84002E;
-  margin-bottom: 8px;
+    color: #84002E;
+    margin-bottom: 8px;
 }
 
 .treat-card p {
-  font-size: 14px;
-  color: #555;
+    font-size: 14px;
+    color: #555;
 }
 
-/* Hover effect */
 .treat-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
 }
-
 
 /* ============================= */
 /* About Section */
 /* ============================= */
-
 .about {
-  padding: 70px 20px;
-  text-align: center;
+    padding: 70px 20px;
+    text-align: center;
 }
 
 .about-title {
-  font-size: 2rem;
-  color: #eb1761;
-  margin-bottom: 10px;
-  margin-top: 80px;
-  text-align: center;
+    font-size: 2rem;
+    color: #eb1761;
+    margin-bottom: 10px;
+    margin-top: 80px;
+    text-align: center;
 }
 
 .about-underline {
-  width: 80px;
-  height: 3px;
-  background-color: #eb1761;
-  margin: 0 auto 20px;
-  border-radius: 2px;
+    width: 80px;
+    height: 3px;
+    background-color: #eb1761;
+    margin: 0 auto 20px;
+    border-radius: 2px;
 }
 
 .about-text {
-  max-width: 650px;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.7;
-  color:#f10759 ;
-  text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #f10759;
+    text-align: center;
 }
 
-/* Footer container */
+/* ============================= */
+/* Footer Section */
+/* ============================= */
 .footer {
-  background-color: #574a7e; /* dark purple */
-  padding: 40px 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px; /* space between logo, icons, and text */
+    background-color: #574a7e;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-/* Logo */
 .footer__logo img {
-  width: 150px;  /* adjust as needed */
-  height: auto;
-  margin-bottom: 10px;
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-/* Social icons container */
 .footer-icons {
-  display: flex;
-  gap: 20px; /* space between icons */
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Individual icons */
 .footer-icons i {
-  font-size: 24px;
-  color: #ffffff;  /* white icons */
-  transition: color 0.3s, transform 0.3s;
-  cursor: pointer;
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
 }
 
 .footer-icons i:hover {
-  color: #a287f3;  /* optional hover color, lighter purple */
-  transform: translateY(-2px); /* subtle lift effect */
+    color: #a287f3;
+    transform: translateY(-2px);
 }
 
-/* Footer text */
 .footer p {
-  font-size: 14px;
-  color: #ffffff; /* white text */
-  margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 10px;
 }
 
-/* Responsive layout for larger screens */
+/* Footer larger screens layout */
 @media (min-width: 768px) {
-  .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    padding: 40px 80px;
-  }
-
-  .footer p {
-    margin-top: 0;
-  }
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 40px 80px;
+    }
+    
+    .footer p {
+        margin-top: 0;
+    }
 }
-/* Styling the form container */
-.form {
+
+/* ============================= */
+/* Forms / Buttons */
+/* ============================= */
+form {
     width: 100%;
-    max-width: 600px; /* Limit the form's width */
-    margin: 0 auto; /* Center the form */
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Styling the headings */
-  h3 {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h3 {
     font-size: 1.6rem;
     color: #333;
     margin-bottom: 15px;
     text-align: center;
-  }
-  
-  /* Styling the form labels */
-  label {
-    display: block; /* Ensures the label takes up full width */
+}
+
+label {
+    display: block;
     margin-bottom: 8px;
     font-size: 1rem;
     color: #555;
-  }
-  
-  /* Styling input fields */
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="number"],
-  input[type="datetime-local"],
-  input[type="file"],
-  textarea,
-  select {
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime-local"],
+input[type="file"],
+textarea,
+select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px; /* Space between fields */
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
-  }
-  
-  /* Styling the submit button */
-  button[type="submit"] {
+}
+
+button[type="submit"] {
     width: 100%;
     padding: 12px;
     background-color: #c8b6ff;
@@ -585,248 +511,38 @@ justify-content: center;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #a287f3; /* Slightly darker green on hover */
-  }
-  
-  /* Styling the checkbox */
-  input[type="checkbox"] {
+}
+
+button[type="submit"]:hover {
+    background-color: #a287f3;
+}
+
+input[type="checkbox"] {
     margin-right: 10px;
-  }
-  
-  /* Styling the checkbox label */
-  label[for="terms"] {
+}
+
+label[for="terms"] {
     font-size: 0.9rem;
     color: #777;
-  }
-  
-  /* Adding space between each form section */
-  form h3, form label, form input, form textarea, form select {
-    margin-bottom: 20px;
-  }
-  
-  /* Styling the disabled input (e.g., pickup/delivery preference) */
-  input[disabled], textarea[disabled] {
-    background-color: #f2f2f2;
-    cursor: not-allowed;
-  }
-  
-  /* Optional: Add some styles for the file input */
-  input[type="file"] {
-    border: none;
-    padding: 8px;
-  }
-  
-        
-        
-/*Contact form container */
-        #contact-container {
-            
-            background: linear-gradient(145deg #c7a0f3, white); /* Soft pastel gradient */
-            border-radius: 12px;
-            padding:10px;
-            width: 90%; /* Makes it responsive */
-            max-width: 500px; /* Prevents it from getting too large */
-            margin: auto;
-            transition: all 0.3s ease-in-out;
-            text-align: center;
-        }
-
-        button {
-            background:#574a7e ;
-            color: white;
-            font-size: 16px;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background:#70629a ;
-            transform: scale(1.05);
-        }
-
-        .aboutus{
-            background: linear-gradient(145deg #c7a0f3, white); /* Soft pastel gradient */
-            border-radius: 12px;
-            padding:10px;
-            width: 90%; /* Makes it responsive */
-            max-width: 500px; /* Prevents it from getting too large */
-            margin: auto;
-            transition: all 0.3s ease-in-out;
-            text-align: center;
-        }
-
-        .disclaimer{
-            text-align: center;
-            color:#C97A6D;
-        }
-
-
-        /* Hide hamburger on desktop */
-.hamburger {
-  display: none;
 }
-        
-/* ================================= */
-/* ✅ MOBILE VIEW — CLEAN VERSION */
-/* ================================= */
-@media (max-width: 768px) {
 
-  /* Prevent horizontal scroll */
-  body {
-    overflow-x: hidden;
-  }
-
-  .container {
-    width: 100%;
-    padding: 0 16px;
-  }
-
-  .header {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 16px;
-    gap: 10px;
-  }
-
-  /* Top row: logo + icons */
-  .logo {
-    position: static;
-    width: 70px;
-    height: 70px;
-  }
-
-  .social-icons {
-    display: none
-  }
-
-  /* Hamburger under logo */
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    margin-top: 2px;
-  }
-
-  .hamburger span {
-    height: 1px;
-    width: 50%;
-    background-color: #ff6098;
-    border-radius: 1px;
-  }
-
-  /* Mobile nav dropdown */
-  .navigation {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #ff6098;
-    padding: 10px 0;
+/* Contact / About Us Cards */
+#contact-container,
+.aboutus {
+    background: linear-gradient(145deg #c7a0f3, white);
+    border-radius: 12px;
+    padding: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
     text-align: center;
-  }
-
-  .navigation.show {
-    display: flex;
-  }
-
 }
-  .hero {
-    flex-direction: column;
-    height: auto;
+
+.disclaimer {
     text-align: center;
-    padding: 40px 20px;
-  }
-
-  .hero-image img {
-    width: 200px;
-    height: auto;
-    transform: rotate(0deg);
-  }
-
-  /* ================= GRIDS ================= */
-
-  .cake-title {
-    font-size: 1rem;
-  }
-
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .testimonial-title{
-    font-size: 1rem;
-  }
-
-  .treats-title{
-    font-size: 1rem;
-  }
-  .mini-treats {
-    padding: 40px 16px; /* space around section */
-    box-sizing: border-box;
+    color: #C97A6D;
 }
 
-.mini-treats-grid {
-    display: flex;           /* switch from grid to flex for centering */
-    flex-direction: column;  /* stack cards vertically */
-    align-items: center;     /* center cards horizontally */
-    gap: 24px;               /* spacing between cards */
-}
-
-.treat-card {
-    width: 90%;             /* shrink width, keeps space on sides */
-    max-width: 400px;       /* optional, keeps cards from getting too big on tablets */
-    padding: 20px;          /* keep internal padding */
-    box-sizing: border-box;
-}
-
-.treat-card img {
-    width: 100%;            /* keep full width of card */
-    height: 220px;          /* keep original height */
-    object-fit: cover;
-    border-radius: 15px;
-}
-  /* ================= SWIPER ================= */
-
-  .swiper {
-    width: 100%;
-  }
-
-  /* ================= TYPOGRAPHY ================= */
-
-  .brand-name {
-    font-size: 28px;
-  }
-
-  .testimonial-title,
-  .treats-title,
-  .cake-title,
-  .about-title {
-    font-size: 1.6rem;
-  }
-
- 
-.about-title {
-    font-size: 1rem;
-  }
-
-  .about-text {
-    font-size: 15px;
-  }
-
-  /* ================= FOOTER ================= */
-
-  .footer {
-    flex-direction: column;
-    text-align: center;
-  }
-}
+/* ============================= */
+/* END OF BASE.CSS */
+/* ============================= */
