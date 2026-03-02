@@ -762,6 +762,33 @@ justify-content: center;
     gap: 24px;
   }
 
+  .mini-treats {
+    padding: 40px 16px; /* space from edges */
+    box-sizing: border-box;
+}
+
+.mini-treats-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 24px;                  /* spacing between cards */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 8px;             /* small horizontal padding for extra whitespace */
+    box-sizing: border-box;
+}
+
+.treat-card {
+    padding: 16px;      /* inside card padding */
+    box-sizing: border-box;
+}
+
+.treat-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
   /* ================= SWIPER ================= */
 
   .swiper {
