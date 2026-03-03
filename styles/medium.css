@@ -1,69 +1,71 @@
 /* ================= MEDIUM / TABLET VIEW ================= */
 @media (min-width: 769px) and (max-width: 1024px) {
 
+  /* ================= Container ================= */
   .container {
-    width: 90%;
-    padding: 0 16px;
+    width: 100%;
+    max-width: 1000px;
   }
 
-  /* Header */
+  /* ================= Header ================= */
   .header {
     height: 120px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
   }
 
   .logo {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
+    left: 30px;
+    top: 5px;
   }
 
-  /* Navigation */
   .navigation {
-    width: 90%;
-    max-width: 600px;
+    width: 600px;
+    height: 55px;
+    top: 35px;
+    padding: 0 30px;
   }
 
   .nav-link {
-    font-size: 20px;
-    padding: 8px 0;
+    font-size: 18px;
+  }
+
+  .social-icons {
+    right: 30px;
+    top: 50px;
   }
 
   .social-icons i {
     font-size: 20px;
   }
 
-  /* Hero */
+  /* ================= Hero ================= */
   .hero {
-    flex-direction: row;
-    padding: 0 20px;
-    height: 400px;
+    height: 380px;
+    gap: 30px;
+    padding: 0 30px;
+  }
+
+  .brand-name {
+    font-size: 30px;
+  }
+
+  .tagline {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 13px;
   }
 
   .hero-image img {
     width: 220px;
-    height: auto;
-    transform: rotate(-45deg);
+    height: 260px;
+    transform: rotate(-90deg);
   }
 
-  .brand-name {
-    font-size: 32px;
-  }
-
-  /* Grids */
-  .testimonial-grid,
-  .mini-treats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .treat-card {
-    max-width: 90%;
-  }
-
-  /* Typography */
+  /* ================= Section Titles ================= */
   .testimonial-title,
   .treats-title,
   .cake-title,
@@ -71,12 +73,59 @@
     font-size: 1.8rem;
   }
 
+  /* ================= Testimonials (KEEP 3 COLUMNS) ================= */
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 950px;
+  }
+
+  .testimonial-card {
+    padding: 18px;
+    font-size: 14px;
+  }
+
+  /* ================= Mini Treats (KEEP 3 COLUMNS) ================= */
+  .mini-treats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 950px;
+  }
+
+  .treat-card {
+    padding: 16px;
+  }
+
+  .treat-card img {
+    height: 180px;
+  }
+
+  /* ================= Cake Slider ================= */
+  .cake-slider {
+    max-width: 900px;
+  }
+
+  .swiper-slide img {
+    max-width: 600px;
+  }
+
+  /* ================= About ================= */
   .about-text {
+    max-width: 600px;
     font-size: 15px;
   }
 
-  /* Footer adjustments */
+  /* ================= Footer ================= */
   .footer {
-    padding: 20px 40px;
+    padding: 30px 40px;
   }
+
+  .footer__logo img {
+    width: 120px;
+  }
+
+  .footer-icons i {
+    font-size: 20px;
+  }
+
 }

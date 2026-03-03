@@ -79,11 +79,17 @@
     font-size: 28px;
   }
 
+  .testimonial-title{
+    color: #4A0983;
+     margin-top: 60px;
+  }
+
   /* Grids stacked */
   .testimonial-grid,
   .mini-treats-grid {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
   }
 
