@@ -71,7 +71,7 @@ body {
 
 .nav-link {
     font-family: 'Istok Web', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     color: white;
     text-decoration: none;
     transition: opacity 0.3s;
@@ -647,6 +647,15 @@ label[for="terms"] {
     color: #C97A6D;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#testimonials,
+#mini-treats,
+#cakes {
+  scroll-margin-top: 160px;
+}
 /* ============================= */
 /* END OF BASE.CSS */
 /* ============================= */

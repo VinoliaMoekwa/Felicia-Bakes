@@ -47,6 +47,11 @@
     border-radius: 1px;
   }
 
+  .hamburger {
+  position: relative;
+  z-index: 1000;
+}
+
   /* Mobile navigation dropdown */
   .navigation {
     display: none;
