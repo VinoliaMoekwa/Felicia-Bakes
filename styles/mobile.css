@@ -99,9 +99,14 @@
     font-size: 28px;
   }
 
+  h2{
+    font-size: 16px;
+  }
   .testimonial-title{
     color: #4A0983;
      margin-top: 60px;
+     margin-bottom: 20px;
+
   }
 
   /* Grids stacked */
