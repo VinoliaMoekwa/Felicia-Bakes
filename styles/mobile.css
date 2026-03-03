@@ -12,6 +12,7 @@
 
   /* Header */
   .header {
+    position: relative;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -53,19 +54,28 @@
 }
 
   /* Mobile navigation dropdown */
-  .navigation {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #ff6098;
-    padding: 10px 0;
-    text-align: center;
-  }
-
+ 
+.navigation {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 12px;
+  width: 100%;
+  background: transparent !important;
+  padding: 10px 0;
+  text-align: center;
+}
   .navigation.show {
     display: flex;
   }
 
+ .navigation .nav-link {
+  font-size: 12px;
+  color: #d63384;
+  text-decoration: none;
+  white-space: nowrap;
+}
   /* Hero */
   .hero {
     flex-direction: column;
