@@ -1,218 +1,164 @@
 /* ============================= */
-/* MOBILE FIRST STYLES */
+/* MOBILE STYLES */
 /* ============================= */
+@media (max-width: 768px) {
+  .header {
+    background: #fff;
+    position: relative;
+    z-index: 1000;
+  }
 
-/* Header / mobile nav */
-.header {
-  background: #fff;
-  position: relative;
-  z-index: 1000;
+  .header-top {
+    background: #fff;
+    border-bottom: 1px solid #f3dce5;
+    min-height: 64px;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 16px;
+    top: 20px;
+    z-index: 1200;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #ff6098;
+    border-radius: 2px;
+  }
+
+  .navigation {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    padding: 0 16px 12px;
+    margin: 0;
+    box-sizing: border-box;
+    border-top: 1px solid #f3dce5;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    z-index: 1100;
+  }
+
+  .navigation.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navigation .nav-link {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid #f3dce5;
+    color: #d63384;
+    text-decoration: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-image img {
+    width: 200px;
+  }
+
+  .brand-name {
+    font-size: 28px;
+  }
+
+  .form-page {
+    padding: 20px 16px 40px;
+  }
+
+  .form-intro {
+    margin: 12px 0 18px;
+  }
+
+  .form-section {
+    background: #fff;
+    padding: 20px 16px;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  .form-section + .form-section {
+    margin-top: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .date-time-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-intro h2 {
+    text-align: center;
+  }
+
+  .disclaimer-card {
+    background: #fff3f7;
+    border: 1px solid #f2bfd1;
+  }
+
+  .disclaimer-card p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .contact-summary-text {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    background: #ff6098;
+    color: white;
+    border: none;
+  }
 }
 
-.header-top {
-  background: #fff;
-  border-bottom: 1px solid #f3dce5;
-  min-height: 64px;
-}
-
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 16px;
-  top: 20px;
-  z-index: 1200;
-  cursor: pointer;
-}
-
-.hamburger span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: #ff6098;
-  border-radius: 2px;
-}
-
-.navigation {
-  display: none;
-  position: absolute;
-  top: 64px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background: #fff;
-  padding: 0 16px 12px;
-  margin: 0;
-  box-sizing: border-box;
-  border-top: 1px solid #f3dce5;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-  z-index: 1100;
-}
-
-.navigation.show {
-  display: flex;
-  flex-direction: column;
-}
-
-.navigation .nav-link {
-  display: block;
-  width: 100%;
-  padding: 14px 0;
-  border-bottom: 1px solid #f3dce5;
-  color: #d63384;
-  text-decoration: none;
-}
-
-/* ============================= */
-/* HERO / CONTENT */
-/* ============================= */
-
-.hero {
-  flex-direction: column;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.hero-image img {
-  width: 200px;
-}
-
-.brand-name {
-  font-size: 28px;
-}
-
-/* ============================= */
-/* FORM PAGE */
-/* ============================= */
-
-.form-page {
-  padding: 20px 16px 40px;
-}
-
-.form-intro {
-  margin: 12px 0 18px;
-}
-
-/* FORM SECTIONS */
-.form-section {
-  background: #fff;
-  padding: 20px 16px;
-  border-radius: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* 🔥 THIS GUARANTEES GAP BETWEEN CARDS */
-.form-section + .form-section {
-  margin-top: 24px;
-}
-
-/* FORM ELEMENTS */
-.form-group {
-  margin-bottom: 16px;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-/* DATE + TIME */
-.date-time-group {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* ============================= */
-/* CONTACT PAGE */
-/* ============================= */
-
-.contact-intro h2 {
-  text-align: center;
-}
-
-.disclaimer-card {
-  background: #fff3f7;
-  border: 1px solid #f2bfd1;
-}
-
-.disclaimer-card p {
-  margin: 0;
-  text-align: center;
-}
-
-.contact-summary-text {
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.summary-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* ============================= */
-/* BUTTON */
-/* ============================= */
-
-.submit-btn {
-  width: 100%;
-  padding: 14px;
-  border-radius: 10px;
-  background: #ff6098;
-  color: white;
-  border: none;
-}
-
-/* ============================= */
-/* BREAKPOINT: 480px */
-/* ============================= */
-
-@media (min-width: 480px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .date-time-group {
     flex-direction: row;
   }
 
   .date-time-group .form-group {
     flex: 1;
-  }
-}
-
-/* ============================= */
-/* BREAKPOINT: 769px */
-/* ============================= */
-
-@media (min-width: 769px) {
-  .hamburger {
-    display: none;
-  }
-
-  .navigation {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    gap: 12px;
-    box-shadow: none;
-    border: none;
-  }
-
-  .navigation .nav-link {
-    border: 1px solid #d63384;
-    border-radius: 20px;
-    padding: 6px 14px;
-  }
-
-  .form-page {
-    max-width: 700px;
-    margin: 0 auto;
   }
 }
