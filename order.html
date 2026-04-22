@@ -13,14 +13,12 @@
 
   <link rel="icon" href="images/feliciabakesfavicon.png">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/mobile.css">
   <link rel="stylesheet" href="styles/medium.css">
   <link rel="stylesheet" href="styles/larger.css">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -28,10 +26,7 @@
     rel="stylesheet"
   >
 
-  <!-- Box Icons -->
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
 
   <meta property="og:title" content="Felicia Bakes Online Store">
@@ -220,9 +215,16 @@
           </select>
         </div>
 
-        <div class="form-group">
-          <label for="event-date">Event Date and Time</label>
-          <input type="datetime-local" id="event-date" name="event-date" required>
+        <div class="date-time-group">
+          <div class="form-group">
+            <label for="event-date">Event Date</label>
+            <input type="date" id="event-date" name="event-date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="event-time">Event Time</label>
+            <input type="time" id="event-time" name="event-time" required>
+          </div>
         </div>
       </section>
 
