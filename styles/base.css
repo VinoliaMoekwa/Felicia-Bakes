@@ -198,6 +198,144 @@ body {
 }
 
 /* ============================= */
+/* SHARED ORDER / CONTACT STYLES */
+/* ============================= */
+
+.form-page {
+  padding: 20px 16px 40px;
+}
+
+.form-intro {
+  margin: 12px 0 18px;
+}
+
+.form-section {
+  background: #fff;
+  padding: 20px 16px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-section + .form-section {
+  margin-top: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font: inherit;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.date-time-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: #ff6098;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Contact page */
+.contact-intro h2 {
+  text-align: center;
+}
+
+.disclaimer-card {
+  background: #fff3f7;
+  border: 1px solid #f2bfd1;
+  box-shadow: none;
+}
+
+.disclaimer-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: #c26a86;
+  text-align: center;
+}
+
+.contact-summary-text {
+  text-align: center;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.summary-list p {
+  margin: 0;
+  line-height: 1.6;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* Order page terms */
+.terms-group {
+  margin-top: 8px;
+}
+
+.terms-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+}
+
+.terms-label input[type="checkbox"] {
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  margin: 3px 0 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.terms-label span {
+  display: block;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+@media (min-width: 480px) {
+  .date-time-group {
+    flex-direction: row;
+  }
+
+  .date-time-group .form-group {
+    flex: 1;
+  }
+}
+/* ============================= */
 /* TITLES / UNDERLINES */
 /* ============================= */
 
