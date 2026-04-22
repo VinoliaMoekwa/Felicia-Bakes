@@ -335,6 +335,16 @@ textarea {
     flex: 1;
   }
 }
+
+.form-intro {
+  text-align: center;
+}
+
+.contact-page,
+.form-page {
+  max-width: 760px;
+  margin: 0 auto;
+}
 /* ============================= */
 /* TITLES / UNDERLINES */
 /* ============================= */
