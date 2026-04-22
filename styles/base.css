@@ -53,8 +53,8 @@ body {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 32px;
-  min-height: 96px;
+  gap: 20px;
+  min-height: 110px;
   padding: 0 40px;
 }
 
@@ -71,33 +71,31 @@ body {
   object-fit: contain;
 }
 
-/* Desktop nav — plain text links, no pills */
+/* Desktop nav pill */
 .navigation {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
-  width: auto;
-  margin: 0;
-  padding: 0;
-  background: transparent;
+  justify-self: center;
+  gap: 24px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 12px 32px;
+  min-height: 64px;
+  background-color: #ff6098;
+  border-radius: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border: none;
-  border-radius: 0;
-  box-shadow: none;
-  min-height: auto;
 }
 
 .nav-link {
   font-family: 'Istok Web', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  color: #eb1761;
+  color: white;
   text-decoration: none;
   white-space: nowrap;
   transition: opacity 0.3s ease;
-  padding: 0;
-  border: none;
-  background: none;
 }
 
 .nav-link:hover {
@@ -106,7 +104,7 @@ body {
 
 .social-icons {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   align-items: center;
   justify-content: flex-end;
 }
@@ -132,7 +130,6 @@ body {
 .hamburger {
   display: none;
 }
-
 /* ============================= */
 /* HERO */
 /* ============================= */
