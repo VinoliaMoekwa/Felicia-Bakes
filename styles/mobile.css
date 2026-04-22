@@ -145,6 +145,50 @@
     font-size: 15px;
   }
 
+  .form-page {
+  padding: 20px 16px 40px;
+}
+
+.form-section {
+  background: #fff;
+  padding: 20px 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.form-section h2 {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+
   .footer {
     flex-direction: column;
     text-align: center;
