@@ -330,4 +330,51 @@ textarea {
   .social-icons {
     display: flex;
   }
+
+  .contact-intro h2 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.disclaimer-card {
+  background: #fff3f7;
+  border: 1px solid #f2bfd1;
+  box-shadow: none;
+}
+
+.disclaimer-card p {
+  margin: 0;
+  line-height: 1.6;
+  color: #c26a86;
+  text-align: center;
+}
+
+.contact-summary h3 {
+  margin-bottom: 10px;
+}
+
+.contact-summary-text {
+  text-align: center;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.summary-list p {
+  margin: 0;
+  line-height: 1.6;
+  text-align: left;
+  word-break: break-word;
+}
+
+.summary-list strong {
+  color: #222;
+}
+
 }
