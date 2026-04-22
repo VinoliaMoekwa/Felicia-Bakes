@@ -71,19 +71,20 @@ body {
   object-fit: contain;
 }
 
+/* Desktop nav — plain text links, no pills */
 .navigation {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 28px;
   width: auto;
-  min-height: auto;
   margin: 0;
   padding: 0;
   background: transparent;
   border: none;
   border-radius: 0;
   box-shadow: none;
+  min-height: auto;
 }
 
 .nav-link {
@@ -94,6 +95,9 @@ body {
   text-decoration: none;
   white-space: nowrap;
   transition: opacity 0.3s ease;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 .nav-link:hover {
@@ -124,6 +128,7 @@ body {
   color: #a287f3;
 }
 
+/* Hide hamburger on desktop */
 .hamburger {
   display: none;
 }
