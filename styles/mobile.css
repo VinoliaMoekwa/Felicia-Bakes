@@ -377,4 +377,9 @@ textarea {
   color: #222;
 }
 
+.form-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 }
