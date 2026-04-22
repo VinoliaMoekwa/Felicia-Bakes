@@ -382,4 +382,8 @@ textarea {
   flex-direction: column;
   gap: 16px;
 }
+
+.disclaimer-card + .contact-summary {
+  margin-top: 24px;
+}
 }
