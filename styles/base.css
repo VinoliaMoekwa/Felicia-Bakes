@@ -54,17 +54,14 @@ body {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 32px;
-  min-height: 110px;
-  padding: 0 48px;
+  min-height: 96px;
+  padding: 0 40px;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: auto;
-  height: auto;
-  flex-shrink: 0;
 }
 
 .logo img {
@@ -74,7 +71,6 @@ body {
   object-fit: contain;
 }
 
-/* Desktop nav */
 .navigation {
   display: flex;
   align-items: center;
@@ -128,7 +124,6 @@ body {
   color: #a287f3;
 }
 
-/* Hide hamburger on desktop */
 .hamburger {
   display: none;
 }
