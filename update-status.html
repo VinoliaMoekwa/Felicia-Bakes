@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Order Status</title>
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/mobile.css">
+</head>
+
+<body>
+  <main class="form-page">
+    <section class="form-intro">
+      <h2>Update Order Status</h2>
+    </section>
+
+    <section class="form-section">
+      <div class="form-group">
+        <label>Order Number</label>
+        <input type="text" id="orderNumber" placeholder="FB001">
+      </div>
+
+      <div class="form-group">
+        <label>Status</label>
+        <select id="status">
+          <option>Awaiting Payment</option>
+          <option>In Progress</option>
+          <option>Ready for Collection</option>
+        </select>
+      </div>
+
+      <button id="updateBtn" class="submit-btn">Update</button>
+
+      <p id="result"></p>
+    </section>
+  </main>
+
+  <script src="scripts/update-status.js"></script>
+</body>
+</html>
