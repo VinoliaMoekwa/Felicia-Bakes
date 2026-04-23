@@ -23,11 +23,12 @@
     height: auto;
   }
 
+
   .navigation {
     width: auto;
     min-height: auto;
     padding: 0;
-    gap: 14px;
+    gap: 18px;
     background: transparent;
     border-radius: 0;
     box-shadow: none;
