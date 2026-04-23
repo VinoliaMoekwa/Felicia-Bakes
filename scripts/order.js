@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // --- PRICING DATA ---
   const cakePrices = {
     small: { fondant: 450, buttercream: 350, icing: 350 },
     medium: { fondant: 900, buttercream: 850, icing: 850 },
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fondant: 35
   };
 
-  // --- ELEMENTS ---
   const cakeCheckbox = document.getElementById("cake-checkbox");
   const cupcakeCheckbox = document.getElementById("cupcake-checkbox");
   const cakeSize = document.getElementById("cake-size");
@@ -24,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalPriceElement = document.getElementById("total-price");
   const orderForm = document.getElementById("order-form");
 
-  // --- CALCULATOR LOGIC ---
   function calculateTotal() {
     let totalPrice = 0;
 
@@ -54,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
     totalPriceElement.textContent = totalPrice.toFixed(2);
   }
 
-  // --- CALCULATOR EVENT LISTENERS ---
   [
     cakeCheckbox,
     cupcakeCheckbox,
@@ -72,9 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
     cupcakeQuantity.addEventListener("input", calculateTotal);
   }
 
-  // --- ORDER SUBMISSION LOGIC ---
   if (orderForm) {
-    orderForm.addEventListener("submit", function (event) {
+    orderForm.addEventListener("submit", async function (event) {
       event.preventDefault();
 
       const name = document.getElementById("full-name").value.trim();
@@ -93,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const occasion = document.getElementById("occasion").value;
       const eventDate = document.getElementById("event-date").value;
       const eventTime = document.getElementById("event-time").value;
+      const totalPrice = totalPriceElement.textContent;
 
       if (
         !name ||
@@ -108,9 +104,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      const totalPrice = totalPriceElement.textContent;
-
-      const order = {
+      const orderPayload = {
+        name,
+        email,
         cakeSelected,
         cupcakeSelected,
         flavour,
@@ -128,12 +124,30 @@ document.addEventListener("DOMContentLoaded", function () {
         totalPrice
       };
 
-      const orderInfo = { name, email, order };
-      localStorage.setItem("orderInfo", JSON.stringify(orderInfo));
-      window.location.href = "contact.html";
+      try {
+        const response = await fetch("https://felicia-bakes-backend.onrender.com/orders", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(orderPayload)
+        });
+
+        if (!response.ok) {
+          alert("Failed to create order.");
+          return;
+        }
+
+        const data = await response.json();
+
+        localStorage.setItem("orderInfo", JSON.stringify(data));
+        window.location.href = "contact.html";
+      } catch (error) {
+        console.error("Order submission error:", error);
+        alert("Error submitting order.");
+      }
     });
   }
 
-  // --- INITIAL CALCULATION ---
   calculateTotal();
 });
