@@ -1,27 +1,30 @@
 const button = document.getElementById("trackBtn");
+const result = document.getElementById("result");
+const orderInput = document.getElementById("orderNumber");
 
 button.addEventListener("click", async () => {
-  const orderNumber = document.getElementById("orderNumber").value.trim();
+  const orderNumber = orderInput.value.trim();
 
   if (!orderNumber) {
-    alert("Please enter an order number");
+    result.textContent = "Please enter an order number.";
     return;
   }
 
-  try {
-    const response = await fetch(`https://felicia-bakes-backend.onrender.com/track${orderNumber}`);
-    const data = await response.json();
+  result.textContent = "Checking order...";
 
-    const result = document.getElementById("result");
+  try {
+    const response = await fetch(`https://felicia-bakes-backend.onrender.com/track/${orderNumber}`);
 
     if (!response.ok) {
       result.textContent = "Order not found";
       return;
     }
 
+    const data = await response.json();
+
     result.innerHTML = `<strong>Status:</strong> ${data.status}`;
   } catch (error) {
-    console.error(error);
-    alert("Error connecting to server");
+    console.error("Tracking error:", error);
+    result.textContent = "Error connecting to server.";
   }
 });
