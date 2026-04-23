@@ -9,7 +9,7 @@ button.addEventListener("click", async () => {
   }
 
   try {
-    const response = await fetch(`https://felicia-bakes-backend.onrender.com{orderNumber}`);
+    const response = await fetch(`https://felicia-bakes-backend.onrender.com/track{orderNumber}`);
     const data = await response.json();
 
     const result = document.getElementById("result");
