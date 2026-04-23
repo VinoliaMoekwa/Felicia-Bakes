@@ -701,3 +701,65 @@ label[for="terms"] {
   text-align: center;
   color: #C97A6D;
 }
+
+@media (min-width: 1025px) {
+
+  .hero {
+    position: relative;
+    height: 520px;
+
+    background-image: url("/images/unicorn_cake.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* soft overlay so text stays readable */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 245, 248, 0.6);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* hide the old image ONLY on desktop */
+  .hero-image {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 42px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  .brand-name {
+    font-size: 56px;
+    letter-spacing: 2px;
+  }
+
+  .tagline {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+
+  .cta-button {
+    font-size: 18px;
+    padding: 16px 36px;
+    border-radius: 30px;
+  }
+}
