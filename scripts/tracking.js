@@ -15,6 +15,7 @@ button.addEventListener("click", async () => {
   try {
     const response = await fetch(`https://felicia-bakes-backend.onrender.com/track/${orderNumber}`);
 
+    // Check if order exists BEFORE parsing JSON
     if (!response.ok) {
       result.textContent = "Order not found";
       return;
