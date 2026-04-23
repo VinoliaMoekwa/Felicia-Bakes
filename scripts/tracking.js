@@ -14,7 +14,7 @@ button.addEventListener("click", async () => {
 
     const result = document.getElementById("result");
 
-    if (!data.success) {
+    if (!response.ok) {
       result.textContent = "Order not found";
       return;
     }
