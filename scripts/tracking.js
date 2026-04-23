@@ -15,17 +15,19 @@ button.addEventListener("click", async () => {
   try {
     const response = await fetch(`https://felicia-bakes-backend.onrender.com/track/${orderNumber}`);
 
-    // Check if order exists BEFORE parsing JSON
     if (!response.ok) {
-      result.textContent = "Order not found";
+      // 👇 READ TEXT, NOT JSON
+      const message = await response.text();
+      result.textContent = message || "Order not found";
       return;
     }
 
+    // 👇 ONLY parse JSON if it's valid
     const data = await response.json();
-
     result.innerHTML = `<strong>Status:</strong> ${data.status}`;
+
   } catch (error) {
-    console.error("Tracking error:", error);
+    console.error(error);
     result.textContent = "Error connecting to server.";
   }
 });
