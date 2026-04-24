@@ -824,3 +824,8 @@ label[for="terms"] {
 .back-btn:hover {
   opacity: 0.7;
 }
+
+.cta-button {
+  display: inline-block;
+  text-decoration: none;
+}

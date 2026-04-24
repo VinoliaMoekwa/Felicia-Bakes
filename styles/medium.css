@@ -135,4 +135,9 @@
   .footer-icons i {
     font-size: 20px;
   }
+
+  .cta-button {
+  display: inline-block;
+  text-decoration: none;
+}
 }

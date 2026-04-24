@@ -246,4 +246,9 @@
   .date-time-group .form-group {
     flex: 1;
   }
+
+  .cta-button {
+  display: inline-block;
+  text-decoration: none;
+}
 }
