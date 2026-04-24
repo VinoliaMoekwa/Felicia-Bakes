@@ -1,3 +1,11 @@
+// 🔐 Ask for admin password
+const adminToken = prompt("Enter admin password:");
+
+if (!adminToken) {
+  alert("Access denied.");
+  window.location.href = "index.html";
+}
+
 const btn = document.getElementById("updateBtn");
 const result = document.getElementById("result");
 
@@ -17,7 +25,10 @@ btn.addEventListener("click", async () => {
       `https://felicia-bakes-backend.onrender.com/orders/${orderNumber}/status`,
       {
         method: "PATCH",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "x-admin-token": adminToken // 🔥 THIS is the important line
+        },
         body: JSON.stringify({ status })
       }
     );
