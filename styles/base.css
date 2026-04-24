@@ -806,3 +806,21 @@ label[for="terms"] {
     transform: translateY(0);
   }
 }
+
+.back-nav {
+  max-width: 600px;
+  margin: 20px auto 0;
+  padding: 0 16px;
+}
+
+.back-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #d63384;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  opacity: 0.7;
+}
