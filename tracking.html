@@ -1,16 +1,43 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Track Your Order</title>
+
+  <!-- Your existing styles -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/medium.css">
+  <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/larger.css">
 </head>
+
 <body>
 
-  <h2>Track Your Order</h2>
+  <main class="form-page">
+    <section class="form-intro">
+      <h2>Track Your Order</h2>
+      <p>Enter your order number to see the latest status.</p>
+    </section>
 
-  <input type="text" id="orderNumber" placeholder="Enter Order Number">
-  <button id="trackBtn">Track Order</button>
+    <section class="form-section">
+      <div class="form-group">
+        <input 
+          type="text" 
+          id="orderNumber" 
+          placeholder="Enter Order Number (e.g. FB001)"
+        >
+      </div>
 
-  <p id="result"></p>
+      <button id="trackBtn" class="submit-btn">
+        Track Order
+      </button>
+
+      <!-- IMPORTANT: use div instead of p -->
+      <div id="result"></div>
+    </section>
+  </main>
 
   <script src="scripts/tracking.js"></script>
 

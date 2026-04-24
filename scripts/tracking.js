@@ -13,19 +13,38 @@ button.addEventListener("click", async () => {
   result.textContent = "Checking order...";
 
   try {
-    const response = await fetch(`https://felicia-bakes-backend.onrender.com/track/${orderNumber}`);
+    const response = await fetch(
+      `https://felicia-bakes-backend.onrender.com/track/${orderNumber}`
+    );
 
     if (!response.ok) {
-      // 👇 READ TEXT, NOT JSON
       const message = await response.text();
       result.textContent = message || "Order not found";
       return;
     }
 
-    // 👇 ONLY parse JSON if it's valid
     const data = await response.json();
-    result.innerHTML = `<strong>Status:</strong> ${data.status}`;
 
+    // 🎨 Choose color class based on status
+    let statusClass = "status-awaiting";
+
+    if (data.status === "In Progress") {
+      statusClass = "status-progress";
+    }
+
+    if (data.status === "Ready for Collection") {
+      statusClass = "status-ready";
+    }
+
+    // ✨ Pretty result with animation
+    result.innerHTML = `
+      <div class="track-result">
+        <p><strong>Order Number:</strong> ${data.orderNumber}</p>
+        <span class="status-badge ${statusClass}">
+          ${data.status}
+        </span>
+      </div>
+    `;
   } catch (error) {
     console.error(error);
     result.textContent = "Error connecting to server.";
