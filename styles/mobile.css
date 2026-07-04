@@ -405,23 +405,81 @@
 
 }
 
-/* ============================= */
-/* Small Tablets / Large Phones */
-/* ============================= */
 
-@media (min-width: 480px) and (max-width: 768px) {
 
-  .date-time-group {
-    flex-direction: row;
-  }
+/* ==========================================
+   MOBILE
+========================================== */
 
-  .date-time-group .form-group {
-    flex: 1;
-  }
+@media (max-width:768px){
 
-  .cta-button {
-    display: inline-block;
-    text-decoration: none;
-  }
+.pricing-intro{
+
+    padding:4rem 1.5rem;
+
+}
+
+.pricing-title{
+
+    font-size:2.4rem;
+
+}
+
+.pricing-tagline{
+
+    font-size:1.25rem;
+
+}
+
+.pricing-content-container{
+
+    padding:4rem 1.5rem;
+
+}
+
+.pricing-layout{
+
+    grid-template-columns:1fr;
+
+    gap:2.5rem;
+
+}
+
+.pricing-layout.reverse .pricing-content,
+.pricing-layout.reverse .pricing-image{
+
+    order:unset;
+
+}
+
+.pricing-image img{
+
+    height:300px;
+
+}
+
+.pricing-content{
+
+    text-align:center;
+
+}
+
+.pricing-divider{
+
+    margin:1.5rem auto 2rem;
+
+}
+
+.pricing-content h2{
+
+    font-size:2.2rem;
+
+}
+
+.price-row{
+
+    font-size:.95rem;
+
+}
 
 }

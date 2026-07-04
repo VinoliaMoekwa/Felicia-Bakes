@@ -968,6 +968,415 @@ textarea {
     color:#eb1761;
     font-size:12px;
 }
+
+/* ==========================================
+   PRICING PAGE
+========================================== */
+
+.pricing-page{
+    width:100%;
+}
+
+/* ==========================================
+   INTRO
+========================================== */
+
+.pricing-intro{
+    max-width:750px;
+    margin:0 auto;
+    padding:5rem 2rem 6rem;
+    text-align:center;
+}
+
+.pricing-title{
+    font-size:3.2rem;
+    color:#eb1761;
+    margin-bottom:.75rem;
+}
+
+.pricing-tagline{
+    font-family:"IBM Plex Serif", serif;
+    font-style:italic;
+    font-size:1.5rem;
+    color:#4A0983;
+    margin-bottom:1.5rem;
+}
+
+.pricing-underline{
+    width:90px;
+    height:4px;
+    margin:0 auto 2rem;
+    background:#eb1761;
+    border-radius:999px;
+}
+
+.pricing-text{
+    max-width:650px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+}
+
+
+/* ==========================================
+   FULL WIDTH SECTIONS
+========================================== */
+
+.pricing-category{
+    width:100%;
+    margin:0;
+}
+
+#celebration-cakes{
+    background:#FFF8FB;
+}
+
+#bento-cakes{
+    background:#F7F3FF;
+}
+
+#cupcakes{
+    background:#FFFCF7;
+}
+
+#bento-combos{
+    background:#FFF5F9;
+}
+
+
+/* ==========================================
+   CONTENT CONTAINER
+========================================== */
+
+.pricing-content-container{
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+    padding:6rem 2rem;
+
+}
+
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.pricing-layout{
+
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    gap:4rem;
+
+    align-items:center;
+
+}
+
+.pricing-layout.reverse{
+
+    grid-template-columns:.95fr 1.05fr;
+
+}
+
+.pricing-layout.reverse .pricing-content{
+
+    order:1;
+
+}
+
+.pricing-layout.reverse .pricing-image{
+
+    order:2;
+
+}
+
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.pricing-image img{
+
+    width:100%;
+
+    height:450px;
+
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:26px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+.pricing-script{
+
+    font-family:"IBM Plex Serif", serif;
+
+    font-style:italic;
+
+    color:#eb1761;
+
+    font-size:1.7rem;
+
+    margin-bottom:.3rem;
+
+}
+
+.pricing-content h2{
+
+    margin:0;
+
+    font-size:2.8rem;
+
+    color:#4A0983;
+
+    letter-spacing:2px;
+
+}
+
+.pricing-divider{
+
+    width:120px;
+
+    height:3px;
+
+    margin:1.6rem 0 2.3rem;
+
+    background:#eb1761;
+
+}
+
+
+/* ==========================================
+   PRICE LIST
+========================================== */
+
+.pricing-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.15rem;
+
+}
+
+.price-row{
+
+    display:flex;
+
+    align-items:center;
+
+    font-size:1.05rem;
+
+}
+
+.price-row span:first-child{
+
+    white-space:nowrap;
+
+    color:#444;
+
+}
+
+.price-line{
+
+    flex:1;
+
+    margin:0 1rem;
+
+    border-bottom:2px dotted #d8bfd0;
+
+}
+
+.price-row span:last-child{
+
+    color:#eb1761;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================
+   CTA
+========================================== */
+
+.pricing-note{
+
+    text-align:center;
+
+    padding:6rem 2rem;
+
+    background:#ffc7d7;
+
+}
+
+.pricing-note img{
+
+    width:100%;
+
+    max-width:320px;
+
+    margin:0 auto 2rem;
+
+    display:block;
+
+    border-radius:20px;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+.pricing-note h2{
+
+    color:#4A0983;
+
+    font-size:2.5rem;
+
+    margin-bottom:1rem;
+
+}
+
+.pricing-note p{
+
+    max-width:650px;
+
+    margin:0 auto 2rem;
+
+    color:#4b3b42;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.cta-button{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    border-radius:999px;
+
+    background:#fff;
+
+    color:#eb1761;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+
+    box-shadow:0 12px 28px rgba(0,0,0,.08);
+
+}
+
+.cta-button:hover{
+
+    background:#4A0983;
+
+    color:#fff;
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.pricing-intro{
+
+    padding:4rem 1.5rem;
+
+}
+
+.pricing-title{
+
+    font-size:2.4rem;
+
+}
+
+.pricing-tagline{
+
+    font-size:1.25rem;
+
+}
+
+.pricing-content-container{
+
+    padding:4rem 1.5rem;
+
+}
+
+.pricing-layout{
+
+    grid-template-columns:1fr;
+
+    gap:2.5rem;
+
+}
+
+.pricing-layout.reverse .pricing-content,
+.pricing-layout.reverse .pricing-image{
+
+    order:unset;
+
+}
+
+.pricing-image img{
+
+    height:300px;
+
+}
+
+.pricing-content{
+
+    text-align:center;
+
+}
+
+.pricing-divider{
+
+    margin:1.5rem auto 2rem;
+
+}
+
+.pricing-content h2{
+
+    font-size:2.2rem;
+
+}
+
+.price-row{
+
+    font-size:.95rem;
+
+}
+
+}
+
+
 /* ============================= */
 /* FOOTER */
 /* ============================= */
