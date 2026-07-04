@@ -3,16 +3,18 @@ document.addEventListener("DOMContentLoaded", function() {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
-    speed: 5000,
+
+    speed: 1,
+
     autoplay: {
-      delay: 1000,
+      delay: 7000,
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
     },
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
   });
 });
-

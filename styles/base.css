@@ -1,3 +1,4 @@
+
 /* ============================= */
 /* BASE.CSS — DESKTOP FIRST */
 /* ============================= */
@@ -139,17 +140,40 @@ body {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  background-color: #fff5f8;
-  height: 431px;
-  padding: 0 50px;
+
+  min-height: 430px;
+  padding: 40px 50px;
   position: relative;
-  box-shadow: 0 4px 4px -1px rgba(12, 12, 13, 0.1),
-              0 4px 4px -1px rgba(12, 12, 13, 0.05);
+  overflow: hidden;
+
+  background:
+    linear-gradient(rgba(255,245,248,0.40), rgba(255,245,248,0.40)),
+    url("../images/unicorn-birthday-bento-cake-and-cupcakes.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow:
+    0 4px 4px -1px rgba(12,12,13,.10),
+    0 4px 4px -1px rgba(12,12,13,.05);
+}
+/* Soft overlay */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 245, 248, 0.65);
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
 
@@ -177,6 +201,7 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
 }
 
 .cta-button:hover {
@@ -184,19 +209,11 @@ body {
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* No separate hero image anymore */
+
 .hero-image {
-  flex-shrink: 0;
+  display: none;
 }
-
-.hero-image img {
-  width: 260px;
-  height: 305px;
-  border-radius: 40px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transform: rotate(-90deg);
-  object-fit: cover;
-}
-
 /* ============================= */
 /* SHARED ORDER / CONTACT STYLES */
 /* ============================= */
@@ -345,164 +362,438 @@ textarea {
   max-width: 760px;
   margin: 0 auto;
 }
-/* ============================= */
-/* TITLES / UNDERLINES */
+//* ============================= */
+/* SECTION TITLES */
 /* ============================= */
 
 .testimonial-title,
 .treats-title,
 .cake-title,
-.about-title {
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 60px;
+.about-title{
+
+    font-size:2rem;
+    font-weight:600;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    text-align:center;
+
+    margin-bottom:.75rem;
+
 }
 
-.testimonial-title {
-  color: #4A0983;
+/* Individual Colours */
+
+.testimonial-title{
+    color:#4A0983;
+    margin-top:60px;
 }
 
-.treats-title {
-  color: #84002E;
-  margin-top: 80px;
+.treats-title{
+    color:#84002E;
+    margin-top:80px;
 }
 
-.cake-title {
-  color: #FF4084;
-  margin-bottom: 16px;
-  font-weight: bold;
+.cake-title{
+    color:#FF4084;
+    margin-top:60px;
 }
 
-.about-title {
-  color: #eb1761;
-  margin-top: 80px;
-  margin-bottom: 10px;
+.about-title{
+    color:#EB1761;
+    margin-top:80px;
 }
+
+
+.testimonial-title,
+.treats-title,
+.cake-title,
+.about-title{
+    text-align:center;
+    margin-bottom: 2rem;
+}
+
+/* ============================= */
+/* TITLE UNDERLINES */
+/* ============================= */
 
 .testimonial-heading__underline,
 .cake-heading__underline,
 .treats-heading__underline,
-.about-underline {
-  margin: 0 auto;
-  border-radius: 2px;
+.about-underline{
+    width:120px;
+    height:4px;
+    border-radius:999px;
+    margin:0 auto 3.5rem;
 }
 
-.testimonial-heading__underline {
-  width: 120px;
-  height: 4px;
-  background-color: #4A0983;
-  margin-bottom: 2.5rem;
+/* Individual Colours */
+
+.testimonial-heading__underline{
+    background:#4A0983;
+  
 }
 
-.cake-heading__underline {
-  width: 120px;
-  height: 4px;
-  background-color: #FF4084;
-  margin-bottom: 60px;
+.cake-heading__underline{
+    background:#FF4084;
+     
 }
 
-.treats-heading__underline {
-  width: 120px;
-  height: 4px;
-  background-color: #84002E;
-  margin-bottom: 60px;
+.treats-heading__underline{
+    background:#84002E;
+     
 }
 
-.about-underline {
-  width: 80px;
-  height: 3px;
-  background-color: #eb1761;
-  margin-bottom: 20px;
+.about-underline{
+    width:80px;
+    height:3px;
+    background:#EB1761;
+    margin-bottom:2rem;
+     
 }
+
 
 /* ============================= */
 /* TESTIMONIALS */
 /* ============================= */
 
-.testimonials {
-  padding: 60px 20px;
-  text-align: center;
+.testimonials{
+    padding:5rem 2rem;
+    text-align:center;
 }
 
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  max-width: 1100px;
-  margin: 0 auto;
+.testimonial-title{
+    margin-bottom:1rem;
 }
 
-.testimonial-card {
-  background: #510594;
-  border: 2px solid white;
-  padding: 24px;
-  border-radius: 12px;
-  text-align: left;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  color: white;
+.testimonial-heading__underline{
+    margin:0 auto 4rem;
 }
 
-.testimonial-card h4 {
-  margin-top: 16px;
-  font-weight: 600;
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:3rem;
+
+    max-width:1200px;
+    margin:0 auto;
 }
+
+/* ================= Card ================= */
+
+.testimonial-card{
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+
+    background:#fff;
+
+    padding:2rem 2rem 2.25rem;
+
+    border-radius:36px;
+
+    text-align:center;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.05),
+        0 18px 45px rgba(255,255,255,.45);
+
+    overflow:visible;
+}
+
+/* Floating Quote */
+
+.testimonial-card::before{
+
+    content:"❝";
+
+    position:absolute;
+
+    top:-42px;
+    left:28px;
+
+    font-size:8rem;
+    line-height:1;
+
+    color:#F9DCE6;
+
+    font-family:serif;
+
+    pointer-events:none;
+}
+
+/* ================= Stars ================= */
+
+.testimonial-stars{
+
+    color:#EB1761;
+
+    letter-spacing:4px;
+
+    font-size:1rem;
+
+    margin-bottom:1.75rem;
+
+}
+
+/* ================= Review ================= */
+
+.testimonial-text{
+
+    color:#555;
+
+    line-height:2;
+
+    font-size:1rem;
+
+    margin-bottom:2rem;
+
+    flex:1;
+
+}
+
+/* Divider */
+
+.testimonial-author{
+
+    margin-top:auto;
+
+    padding-top:1.5rem;
+
+    border-top:1px solid #F2E6EB;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:1rem;
+
+}
+
+/* ================= Avatar ================= */
+
+.testimonial-avatar{
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+
+    font-weight:700;
+
+    font-size:1rem;
+
+    flex-shrink:0;
+
+}
+
+/* Individual Avatar Colours */
+
+.testimonial-card:nth-child(1) .testimonial-avatar{
+
+    background:#E7C98C;
+
+}
+
+.testimonial-card:nth-child(2) .testimonial-avatar{
+
+    background:#D7C4FA;
+
+}
+
+.testimonial-card:nth-child(3) .testimonial-avatar{
+
+    background:#B54A73;
+
+}
+
+/* ================= Customer ================= */
+
+.testimonial-author h4{
+
+    margin:0;
+
+    color:#7A0D3C;
+
+    font-size:1rem;
+
+    text-align:left;
+
+}
+
+.testimonial-author span{
+
+    display:block;
+
+    margin-top:.25rem;
+
+    color:#8A8A8A;
+
+    font-size:.85rem;
+
+    text-align:left;
+
+}
+/* ============================= */
+/* CAKE SLIDER */
+/* ============================= */
 
 /* ============================= */
 /* CAKE SLIDER */
 /* ============================= */
 
-.cake-slider {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  position: relative;
-  overflow: visible;
+.cake-slider{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+    padding:5rem 0;
+    position:relative;
 }
 
-.swiper {
-  width: 100%;
+.swiper{
+    width:100%;
 }
 
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.swiper-slide{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:2rem;
 }
 
-.swiper-slide img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border-radius: 20px;
-  object-fit: cover;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+/* Card */
+
+.cake-card{
+    display:flex;
+    align-items:center;
+    gap:60px;
+
+    max-width:1100px;
+    width:100%;
+
+    min-height:520px;
+
+    margin:auto;
+
+    background:#fff;
+    border-radius:30px;
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+/* Image */
+
+.cake-image{
+    flex:0 0 420px;
+    height:520px;
+    overflow:hidden;
+}
+
+.cake-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center;
+
+    display:block;
+}
+
+/* Content */
+
+.cake-content{
+    flex:1;
+
+    height:520px;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:3rem;
+}
+
+.cake-category{
+    color:#eb1761;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+.cake-content h3{
+    margin:1rem 0;
+    font-size:2rem;
+}
+
+.cake-description{
+    margin-bottom:2rem;
+    line-height:1.8;
+}
+
+.cake-features{
+    list-style:none;
+    padding:0;
+    margin:0 0 2rem;
+}
+
+.cake-features li{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:.6rem;
+    margin:.8rem 0;
+}
+
+.cake-features li::before{
+    content:"✓";
+    color:#eb1761;
+    font-weight:bold;
+}
+
+.cake-btn{
+    display:inline-block;
+    padding:14px 30px;
+
+    background:#ffc7d7;
+
+    border-radius:30px;
+
+    text-decoration:none;
+    color:#000;
 }
 
 .swiper-button-prev,
-.swiper-button-next {
-  color: #ffc7d7;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  transition: all 0.3s ease;
-}
+.swiper-button-next{
+    width:50px;
+    height:50px;
 
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+    background:#ffc7d7;
+
+    border-radius:50%;
 }
 
 .swiper-button-prev::after,
-.swiper-button-next::after {
-  color: #ff6098 !important;
-  font-size: 20px;
+.swiper-button-next::after{
+    color:#eb1761;
+    font-size:18px;
 }
 
 /* ============================= */
@@ -558,20 +849,106 @@ textarea {
 /* ABOUT */
 /* ============================= */
 
-.about {
-  padding: 70px 20px;
-  text-align: center;
+.about{
+    padding:7rem 2rem;
+
+    text-align:center;
 }
 
-.about-text {
-  max-width: 650px;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #f10759;
-  text-align: center;
+/* Decorative Flower */
+
+.about-flourish{
+
+    font-size:1.8rem;
+
+    color:#EB1761;
+
+    margin-bottom:2rem;
+
 }
 
+/* Main Text */
+
+.about-text{
+
+    max-width:720px;
+
+    margin:0 auto;
+
+    color:#555;
+
+    font-size:1.05rem;
+
+    line-height:2;
+
+}
+
+/* Signature */
+
+.about-signature{
+
+    margin-top:3rem;
+
+}
+
+/* Divider */
+
+.about-divider{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    margin-bottom:1.25rem;
+
+    color:#EB1761;
+
+}
+
+.about-divider span{
+
+    width:55px;
+    height:1px;
+
+    background:#EB1761;
+
+}
+
+/* Tagline */
+
+.about-tagline{
+
+    margin-bottom:.5rem;
+
+    font-size:0.8rem;
+
+    font-weight:600;
+
+    color:#EB1761;
+
+    letter-spacing:.5px;
+
+}
+
+/* Brand */
+
+.about-brand{
+
+    display:block;
+
+    font: size 1.5rem;
+
+    letter-spacing:3px;
+
+    font-weight:700;
+
+    color:#7A0D3C;
+
+}
 /* ============================= */
 /* FOOTER */
 /* ============================= */
@@ -615,6 +992,18 @@ textarea {
   color: #ffffff;
 }
 
+.footer{
+    width:100%;
+    background:#574a7e;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:40px 80px;
+
+    box-sizing:border-box;
+}
 /* ============================= */
 /* FORMS / SHARED DESKTOP */
 /* ============================= */
@@ -704,38 +1093,6 @@ label[for="terms"] {
 
 @media (min-width: 1025px) {
 
-  .hero {
-    position: relative;
-    height: 520px;
-
-    background-image: url("/images/unicorn_cake.JPG");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  /* soft overlay so text stays readable */
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 245, 248, 0.6);
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* hide the old image ONLY on desktop */
-  .hero-image {
-    display: none;
-  }
 
   .brand-name {
     font-size: 42px;
@@ -805,6 +1162,7 @@ label[for="terms"] {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
 
 .back-nav {
@@ -828,4 +1186,293 @@ label[for="terms"] {
 .cta-button {
   display: inline-block;
   text-decoration: none;
+}
+
+.cake-card{
+    display:flex;
+    align-items:center;
+    gap:60px;
+
+    max-width:1100px;
+    margin:auto;
+
+    background:#fff;
+    border-radius:30px;
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.cake-image{
+    flex:1;
+}
+
+.cake-image img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+.cake-content{
+    flex:1;
+    padding:50px;
+}
+
+.cake-category{
+    color:#eb1761;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:.85rem;
+}
+
+.cake-content h3{
+    margin:15px 0;
+    font-size:2rem;
+    color:#222;
+}
+
+.cake-description{
+    line-height:1.8;
+    color:#666;
+    margin-bottom:25px;
+}
+
+.cake-features{
+    list-style:none;
+    padding:0;
+    margin-bottom:30px;
+}
+
+.cake-features li{
+    margin-bottom:12px;
+}
+
+.cake-btn{
+    display:inline-block;
+    background:#ffc7d7;
+    color:#000;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.cake-btn:hover{
+    background:#eb1761;
+    color:#fff;
+}
+
+.swiper-slide {
+    padding: 2rem;
+}
+
+
+
+.cake-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    background:#ffc7d7;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    color:#eb1761;
+    font-size:18px;
+    font-weight:bold;
+}
+.cake-card{
+    transition:.3s;
+}
+
+.cake-card:hover{
+    transform:translateY(-6px);
+}
+
+.cake-btn{
+    transition:.3s;
+}
+
+.cake-btn:hover{
+    background:#eb1761;
+    color:white;
+    transform:translateY(-2px);
+}
+
+.cake-slider{
+    padding:5rem 0;
+}
+
+
+
+.treat-card{
+    position: relative;
+    overflow: hidden;
+
+    background: #fff;
+    border-radius: 24px;
+    border: 2px solid;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.05);
+
+    text-align: center;
+}
+
+.treat-card img{
+    width: 100%;
+    display: block;
+    border-radius: 18px;
+}
+
+/* Card 1 */
+.treat-gold{
+    border-color: #E8D5B7;
+}
+
+/* Card 2 */
+.treat-purple{
+    border-color: #D7C4FA;
+}
+
+/* Card 3 */
+.treat-burgundy{
+    border-color: #B54A73;
+}
+
+.treat-divider{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:.75rem;
+
+    color:#eb1761;
+
+    transition:.35s;
+}
+
+.treat-divider span{
+    width:40px;
+    height:1px;
+
+    background:#eb1761;
+}
+
+
+
+.treat-card:hover img{
+    transform:scale(1.03);
+}
+
+.treat-card{
+    text-align:center;
+}
+
+.treat-category{
+    text-align:center;
+}
+
+.treat-card h3{
+    text-align:center;
+}
+
+.treat-card p{
+    text-align:center;
+}
+
+.treat-category{
+    margin-top:1.4rem;
+    margin-bottom:.75rem;
+}
+
+.treat-card h3{
+    margin-bottom:1rem;
+}
+
+.treat-divider{
+    margin:1.25rem 0;
+}
+
+.treat-card p{
+    margin-top:1rem;
+}
+
+.treat-divider{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:.75rem;
+    margin:1.25rem 0;
+}
+
+.treat-divider span{
+    width:40px;
+    height:2px;
+    border-radius:999px;
+}
+
+/* Gold */
+.divider-gold{
+    color:#E8D5B7;
+}
+
+.divider-gold span{
+    background:#E8D5B7;
+}
+
+/* Purple */
+.divider-purple{
+    color:#D7C4FA;
+}
+
+.divider-purple span{
+    background:#D7C4FA;
+}
+
+/* Burgundy */
+.divider-burgundy{
+    color:#B54A73;
+}
+
+.divider-burgundy span{
+    background:#B54A73;
+}
+
+@media (min-width:1025px){
+
+.treat-card{
+
+    padding:2.5rem;
+
+}
+
+.treat-category{
+
+    margin-top:1.5rem;
+
+    font-size:.8rem;
+
+}
+
+.treat-card h3{
+
+    font-size:1.8rem;
+
+}
+
+.treat-divider{
+
+    margin:1.2rem 0;
+
+}
+
 }

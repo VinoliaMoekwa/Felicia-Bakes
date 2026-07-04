@@ -1,7 +1,11 @@
 /* ============================= */
 /* MOBILE STYLES */
 /* ============================= */
+
 @media (max-width: 768px) {
+
+  /* ================= Container ================= */
+
   body {
     overflow-x: hidden;
   }
@@ -10,6 +14,12 @@
     width: 100%;
     padding: 0 16px;
   }
+
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  /* ================= Header ================= */
 
   .header {
     background: #fff;
@@ -22,9 +32,10 @@
     border-bottom: 1px solid #f3dce5;
     min-height: 64px;
     padding: 10px 16px;
+
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 
   .logo img {
@@ -37,17 +48,19 @@
     flex-direction: column;
     justify-content: center;
     gap: 4px;
+
     width: 24px;
     height: 24px;
+
     position: absolute;
     left: 16px;
     top: 20px;
+
     z-index: 1200;
     cursor: pointer;
   }
 
   .hamburger span {
-    display: block;
     width: 20px;
     height: 2px;
     background: #ff6098;
@@ -56,17 +69,19 @@
 
   .navigation {
     display: none;
+
     position: absolute;
     top: 64px;
     left: 0;
     right: 0;
-    width: 100%;
+
     background: #fff;
+
     padding: 0 16px 12px;
-    margin: 0;
-    box-sizing: border-box;
+
     border-top: 1px solid #f3dce5;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 18px rgba(0,0,0,.08);
+
     z-index: 1100;
   }
 
@@ -77,9 +92,10 @@
 
   .navigation .nav-link {
     display: block;
-    width: 100%;
     padding: 14px 0;
+
     border-bottom: 1px solid #f3dce5;
+
     color: #d63384;
     text-decoration: none;
   }
@@ -88,13 +104,17 @@
     display: none;
   }
 
+  /* ================= Hero ================= */
+
   .hero {
     display: flex;
     flex-direction: column;
-    height: auto;
-    text-align: center;
-    padding: 40px 20px;
+
     gap: 24px;
+
+    text-align: center;
+
+    padding: 40px 20px;
   }
 
   .hero-content {
@@ -104,7 +124,7 @@
   .hero-image img {
     width: 200px;
     height: auto;
-    transform: rotate(0deg);
+    transform: none;
   }
 
   .brand-name {
@@ -115,14 +135,89 @@
     font-size: 14px;
   }
 
+  /* ================= Section Titles ================= */
+
   .testimonial-title,
   .treats-title,
   .cake-title,
   .about-title {
     font-size: 1.6rem;
+    text-align: center;
   }
 
-  .testimonial-grid,
+  /* ================= Cake Slider ================= */
+
+  .cake-slider {
+    width: 100%;
+  }
+
+  .cake-card {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    min-height: 820px;
+    height: auto;
+  }
+
+  .cake-image {
+    width: 100%;
+    height: 300px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+  }
+
+  .cake-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 30px 30px 0 0;
+  }
+
+  .cake-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem;
+
+    text-align: center;
+  }
+
+  .cake-category {
+    margin-bottom: .4rem;
+  }
+
+  .cake-name {
+    margin: 0 0 1rem;
+  }
+
+  .cake-description {
+    margin-bottom: 1.5rem;
+  }
+
+  .cake-features {
+    margin-bottom: 2rem;
+  }
+
+  .cake-btn {
+    align-self: center;
+    margin-top: auto;
+  }
+
+    /* ================= Mini Treats ================= */
+
   .mini-treats-grid {
     display: flex;
     flex-direction: column;
@@ -130,10 +225,10 @@
     gap: 24px;
   }
 
-  .treat-card,
-  .testimonial-card {
+  .treat-card {
     width: 100%;
     max-width: 400px;
+    padding: 1.5rem;
   }
 
   .treat-card img {
@@ -142,9 +237,70 @@
     object-fit: cover;
   }
 
+  .treat-category {
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+
+    font-size: .72rem;
+
+    text-align: center;
+  }
+
+  .treat-card h3 {
+    font-size: 1.5rem;
+    margin: .4rem 0;
+
+    text-align: center;
+  }
+
+  .treat-divider {
+    margin: .8rem 0;
+  }
+
+  .treat-card p {
+    font-size: .95rem;
+    line-height: 1.7;
+
+    text-align: center;
+  }
+
+  /* ================= Testimonials ================= */
+
+  .testimonial-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+
+.testimonial-card::before{
+
+    top:-18px;
+    left:20px;
+
+    font-size:4.5rem;
+
+}
+
+.testimonial-grid{
+
+    gap:3rem;
+
+}
+  /* ================= About ================= */
+
   .about-text {
     font-size: 15px;
+    text-align: center;
   }
+
+  /* ================= Forms ================= */
 
   .form-page {
     padding: 20px 16px 40px;
@@ -158,8 +314,10 @@
   .form-section {
     background: #fff;
     padding: 20px 16px;
+
     border-radius: 14px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
   }
 
   .form-section + .form-section {
@@ -175,8 +333,10 @@
   textarea {
     width: 100%;
     padding: 12px;
+
     border: 1px solid #ddd;
     border-radius: 8px;
+
     box-sizing: border-box;
   }
 
@@ -214,19 +374,25 @@
   .submit-btn {
     width: 100%;
     padding: 14px;
-    border-radius: 10px;
-    background: #ff6098;
-    color: white;
+
     border: none;
+    border-radius: 10px;
+
+    background: #ff6098;
+    color: #fff;
   }
+
+  /* ================= Footer ================= */
 
   .footer {
     padding: 40px 20px;
-    text-align: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
+    text-align: center;
   }
 
   .footer-icons {
@@ -236,9 +402,15 @@
   .footer p {
     margin-top: 0;
   }
+
 }
 
+/* ============================= */
+/* Small Tablets / Large Phones */
+/* ============================= */
+
 @media (min-width: 480px) and (max-width: 768px) {
+
   .date-time-group {
     flex-direction: row;
   }
@@ -248,7 +420,8 @@
   }
 
   .cta-button {
-  display: inline-block;
-  text-decoration: none;
-}
+    display: inline-block;
+    text-decoration: none;
+  }
+
 }

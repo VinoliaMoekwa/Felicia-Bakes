@@ -1,143 +1,207 @@
 /* ================= MEDIUM / TABLET VIEW ================= */
+
 @media (min-width: 769px) and (max-width: 1024px) {
 
-  /* ================= Container ================= */
-  .container {
-    width: 100%;
-    max-width: 1000px;
-  }
+    /* ================= Container ================= */
 
-  /* ================= Header ================= */
-  .header-top {
-    grid-template-columns: auto 1fr auto;
-    gap: 16px;
-    min-height: 90px;
-    padding: 0 24px;
-  }
+    .container{
+        width:100%;
+        max-width:1000px;
+    }
 
-  .social-icons {
-    display: none;
-  }
-  .logo img {
-    width: 90px;
-    height: auto;
-  }
+    section{
+        padding:4rem 2rem;
+    }
 
+    /* ================= Header ================= */
 
-  .navigation {
-    width: auto;
-    min-height: auto;
-    padding: 0;
-    gap: 18px;
-    background: transparent;
-    border-radius: 0;
-    box-shadow: none;
-  }
+    .header-top{
+        grid-template-columns:auto 1fr auto;
+        gap:16px;
+        min-height:90px;
+        padding:0 24px;
+    }
 
-  .nav-link {
-    font-size: 14px;
-    color: #eb1761;
-  }
+    .logo img{
+        width:90px;
+        height:auto;
+    }
 
-  .social-icons {
-    gap: 12px;
-  }
+    .navigation{
+        width:auto;
+        padding:0;
+        gap:18px;
+        background:transparent;
+        border-radius:0;
+        box-shadow:none;
+    }
 
-  .social-icons i {
-    font-size: 20px;
-  }
+    .nav-link{
+        font-size:14px;
+        color:#eb1761;
+    }
 
-  /* ================= Hero ================= */
-  .hero {
-    height: 380px;
-    gap: 30px;
-    padding: 0 30px;
-  }
+    .social-icons{
+        display:none;
+    }
 
-  .brand-name {
-    font-size: 30px;
-  }
+    /* ================= Hero ================= */
 
-  .tagline {
-    font-size: 14px;
-  }
+    .hero{
+        height:380px;
+        gap:30px;
+        padding:0 30px;
+    }
 
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 13px;
-  }
+    .brand-name{
+        font-size:30px;
+    }
 
-  .hero-image img {
-    width: 220px;
-    height: 260px;
-    transform: rotate(-90deg);
-  }
+    .tagline{
+        font-size:14px;
+    }
 
-  /* ================= Section Titles ================= */
-  .testimonial-title,
-  .treats-title,
-  .cake-title,
-  .about-title {
-    font-size: 1.8rem;
-  }
+    .hero-image img{
+        width:220px;
+        height:260px;
+        transform:rotate(-90deg);
+    }
 
-  /* ================= Testimonials ================= */
-  .testimonial-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 950px;
-  }
+    .cta-button{
+        display:inline-block;
+        text-decoration:none;
+        padding:10px 20px;
+        font-size:13px;
+    }
 
-  .testimonial-card {
-    padding: 18px;
-    font-size: 14px;
-  }
+    /* ================= Section Titles ================= */
 
-  /* ================= Mini Treats ================= */
-  .mini-treats-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 950px;
-  }
+    .testimonial-title,
+    .treats-title,
+    .cake-title,
+    .about-title{
+        font-size:1.8rem;
+        text-align:center;
+        margin-bottom:1rem;
+    }
 
-  .treat-card {
-    padding: 16px;
-  }
+    /* ================= Cake Slider ================= */
 
-  .treat-card img {
-    height: 180px;
-  }
+    .cake-slider{
+        max-width:900px;
+    }
 
-  /* ================= Cake Slider ================= */
-  .cake-slider {
-    max-width: 900px;
-  }
+    .cake-card{
+        max-width:850px;
+        min-height:500px;
 
-  .swiper-slide img {
-    max-width: 600px;
-  }
+        gap:2rem;
+        margin:auto;
+    }
 
-  /* ================= About ================= */
-  .about-text {
-    max-width: 600px;
-    font-size: 15px;
-  }
+    .cake-image{
+        flex:0 0 320px;
+        height:500px;
+    }
 
-  /* ================= Footer ================= */
-  .footer {
-    padding: 30px 40px;
-  }
+    .cake-image img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position:center;
+    }
 
-  .footer__logo img {
-    width: 120px;
-  }
+    
+    .cake-content{
+        height:420px;
 
-  .footer-icons i {
-    font-size: 20px;
-  }
+        padding:2rem;
 
-  .cta-button {
-  display: inline-block;
-  text-decoration: none;
-}
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        text-align:center;
+    }
+
+    .cake-content h3{
+        font-size:2.2rem;
+        line-height:1.25;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev{
+        width:42px;
+        height:42px;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after{
+        font-size:16px;
+    }
+
+    /* ================= Mini Treats ================= */
+
+    .mini-treats-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:30px;
+        max-width:950px;
+    }
+
+    .treat-card{
+        padding:2rem;
+    }
+
+    .treat-card img{
+        height:180px;
+    }
+
+    .treat-category{
+        margin-top:1.25rem;
+        font-size:.75rem;
+    }
+
+    .treat-card h3{
+        font-size:1.6rem;
+    }
+
+    .treat-divider{
+        margin:1rem 0;
+    }
+
+    /* ================= Testimonials ================= */
+
+    .testimonial-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:30px;
+        max-width:950px;
+    }
+
+    .testimonial-card{
+        padding:18px;
+        font-size:14px;
+    }
+
+    /* ================= About ================= */
+
+    .about-text{
+        max-width:600px;
+        font-size:15px;
+    }
+
+    /* ================= Footer ================= */
+
+    .footer{
+        padding:30px 40px;
+    }
+
+    .footer__logo img{
+        width:120px;
+    }
+
+    .footer-icons i{
+        font-size:20px;
+    }
+
 }
