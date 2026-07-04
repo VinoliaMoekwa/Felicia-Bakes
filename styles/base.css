@@ -949,6 +949,25 @@ textarea {
     color:#7A0D3C;
 
 }
+
+
+.about-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+}
+
+.about-divider span{
+    width:50px;
+    height:2px;
+    background:#eb1761;
+}
+
+.about-divider i{
+    color:#eb1761;
+    font-size:12px;
+}
 /* ============================= */
 /* FOOTER */
 /* ============================= */
