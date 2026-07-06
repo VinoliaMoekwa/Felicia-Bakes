@@ -138,127 +138,293 @@
     <!-- PAGE INTRO -->
     <!-- ====================================== -->
 
-    <section class="form-intro">
+   <section class="form-section">
 
-        <h1 class="quote-title">
-            Request a Quote
-        </h1>
+    <h2>2. Your Order</h2>
 
-        <p class="quote-intro">
-            Tell us what you'd like to order and we'll prepare
-            a personalised quote for you. All prices listed are
-            starting prices and final quotations depend on your
-            design requirements.
-        </p>
+    <p class="section-intro">
+        Select everything you'd like to order. You can choose more than one item.
+    </p>
 
-    </section>
+    <!-- ====================================== -->
+    <!-- PRODUCTS -->
+    <!-- ====================================== -->
+
+    <div class="form-group">
+
+        <label>Products</label>
+
+        <div class="checkbox-group">
+
+            <label class="checkbox-item">
+                <input type="checkbox"
+                       id="cake-checkbox"
+                       name="product-type"
+                       value="cake">
+
+                <span>Cakes</span>
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox"
+                       id="cupcake-checkbox"
+                       name="product-type"
+                       value="cupcakes">
+
+                <span>Cupcakes</span>
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox"
+                       id="mini-cake-checkbox"
+                       name="product-type"
+                       value="mini-cakes">
+
+                <span>Mini Cakes</span>
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox"
+                       id="cookie-checkbox"
+                       name="product-type"
+                       value="gourmet-cookies">
+
+                <span>Gourmet Cookies</span>
+            </label>
+
+        </div>
+
+    </div>
 
 
 
     <!-- ====================================== -->
-    <!-- QUOTE FORM -->
+    <!-- CAKE DETAILS -->
     <!-- ====================================== -->
 
-    <form id="quote-form" class="quote-form">
+    <div class="product-group" id="cake-options">
 
-        <!-- ====================================== -->
-        <!-- CUSTOMER INFORMATION -->
-        <!-- ====================================== -->
+        <h3>Cake Details</h3>
 
-        <section class="form-section">
+        <div class="form-group">
 
-            <h2>1. Customer Information</h2>
+            <label for="flavour">Cake Flavour</label>
 
-            <!-- customer information fields -->
+            <select id="flavour" name="flavour">
 
-        </section>
+                <option value="selectoption">Select Flavour</option>
 
+                <option value="chocolate">Chocolate</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="red-velvet">Red Velvet</option>
+                <option value="carrot">Carrot</option>
+                <option value="strawberry">Strawberry</option>
+                <option value="banana">Banana</option>
+                <option value="coffee">Coffee</option>
+                <option value="marble">Marble</option>
+                <option value="cheesecake">Cheesecake</option>
 
+            </select>
 
-        <!-- ====================================== -->
-        <!-- YOUR ORDER -->
-        <!-- ====================================== -->
+        </div>
 
-        <section class="form-section">
+        <div class="form-group">
 
-            <h2>2. Your Order</h2>
+            <label for="filling">Cake Filling</label>
 
-            <p class="section-intro">
-                Select everything you'd like to order.
-                You can choose more than one option.
-            </p>
+            <select id="filling" name="filling">
 
-            <!-- PRODUCTS -->
+                <option value="selectoption">Select Filling</option>
 
-            <!-- CAKE DETAILS -->
+                <option value="buttercream">Buttercream</option>
+                <option value="whipped-cream">Whipped Cream</option>
+                <option value="fruit-jam">Fruit Jam</option>
+                <option value="cream-cheese">Cream Cheese</option>
+                <option value="chocolate-ganache">Chocolate Ganache</option>
 
-            <!-- CUPCAKE DETAILS -->
+            </select>
 
-            <!-- MINI CAKE DETAILS -->
+        </div>
 
-            <!-- GOURMET COOKIE DETAILS -->
+        <div class="form-group">
 
-            <!-- DESIGN DESCRIPTION -->
+            <label for="design-type">Cake Finish</label>
 
-        </section>
+            <select id="design-type" name="design-type">
 
+                <option value="selectoption">Select Finish</option>
 
+                <option value="fondant">Fondant</option>
+                <option value="buttercream">Buttercream</option>
+                <option value="icing">Icing</option>
 
-        <!-- ====================================== -->
-        <!-- PERSONALISATION -->
-        <!-- ====================================== -->
+            </select>
 
-        <section class="form-section">
+        </div>
 
-            <h2>3. Personalisation</h2>
+        <div class="form-group">
 
-            <!-- colour scheme -->
+            <label for="cake-size">Cake Size</label>
 
-            <!-- message -->
+            <select id="cake-size" name="cake-size">
 
-            <!-- dietary -->
+                <option value="selectoption">Select Size</option>
 
-        </section>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
 
+            </select>
 
+        </div>
 
-        <!-- ====================================== -->
-        <!-- EVENT DETAILS -->
-        <!-- ====================================== -->
-
-        <section class="form-section">
-
-            <h2>4. Event Details</h2>
-
-            <!-- occasion -->
-
-            <!-- date -->
-
-            <!-- time -->
-
-        </section>
-
+    </div>
 
 
-        <!-- ====================================== -->
-        <!-- TERMS -->
-        <!-- ====================================== -->
 
-        <section class="form-section">
+    <!-- ====================================== -->
+    <!-- CUPCAKE DETAILS -->
+    <!-- ====================================== -->
 
-            <h2>5. Terms &amp; Conditions</h2>
+    <div class="product-group" id="cupcake-options">
 
-            <!-- payment -->
+        <h3>Cupcake Details</h3>
 
-            <!-- cancellation -->
+        <div class="form-group">
 
-            <!-- terms checkbox -->
+            <label for="cupcake-topping">Cupcake Style</label>
 
-            <!-- submit button -->
+            <select id="cupcake-topping" name="cupcake-topping">
 
-        </section>
+                <option value="">Select Style</option>
 
-    </form>
+                <option value="simpleSwirl">Simple Swirl</option>
+                <option value="bespoke">Bespoke</option>
+                <option value="ediblePrint">Edible Print</option>
+                <option value="acrylicTopper">Acrylic Topper</option>
+                <option value="fondant">Fondant</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="cupcake-quantity">Number of Cupcakes</label>
+
+            <input type="number"
+                   id="cupcake-quantity"
+                   name="cupcake-quantity"
+                   min="1"
+                   value="1">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================== -->
+    <!-- MINI CAKES -->
+    <!-- ====================================== -->
+
+    <div class="product-group" id="mini-cake-options">
+
+        <h3>Mini Cake Details</h3>
+
+        <div class="form-group">
+
+            <label for="mini-cake-flavour">Mini Cake Flavour</label>
+
+            <select id="mini-cake-flavour"
+                    name="mini-cake-flavour">
+
+                <option value="">Select Flavour</option>
+
+                <option value="cookies-cream">Cookies &amp; Cream</option>
+                <option value="lotus-biscoff">Lotus Biscoff</option>
+                <option value="red-velvet">Red Velvet</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="mini-cake-quantity">Number of Mini Cakes</label>
+
+            <input type="number"
+                   id="mini-cake-quantity"
+                   name="mini-cake-quantity"
+                   min="1"
+                   value="1">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================== -->
+    <!-- GOURMET COOKIES -->
+    <!-- ====================================== -->
+
+    <div class="product-group" id="cookie-options">
+
+        <h3>Gourmet Cookie Details</h3>
+
+        <div class="form-group">
+
+            <label for="cookie-flavour">Cookie Flavour</label>
+
+            <select id="cookie-flavour"
+                    name="cookie-flavour">
+
+                <option value="">Select Flavour</option>
+
+                <option value="cookies-cream">Cookies &amp; Cream</option>
+                <option value="lotus-biscoff">Lotus Biscoff</option>
+                <option value="red-velvet">Red Velvet</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="cookie-quantity">Number of Cookies</label>
+
+            <input type="number"
+                   id="cookie-quantity"
+                   name="cookie-quantity"
+                   min="1"
+                   value="1">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================== -->
+    <!-- DESIGN -->
+    <!-- ====================================== -->
+
+    <div class="form-group">
+
+        <label for="design">
+            Describe Your Design
+        </label>
+
+        <textarea id="design"
+                  name="design"
+                  rows="5"
+                  placeholder="Tell us about your theme, colours, inspiration or any special requests."
+                  required></textarea>
+
+    </div>
+
+</section>
 
 </main>
 
