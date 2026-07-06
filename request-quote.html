@@ -108,7 +108,7 @@
   <header class="header">
   <div class="header-top">
     <div class="logo">
-      <img src="images/logo-transparent.png" alt="Felicia Bakes Logo">
+      <img src="images/felicia-bakes-logo.png" alt="Felicia Bakes Logo">
     </div>
 
     <nav class="navigation" id="mobileNav">
@@ -133,195 +133,134 @@
 </header>
 
   <main class="form-page">
+
+    <!-- ====================================== -->
+    <!-- PAGE INTRO -->
+    <!-- ====================================== -->
+
     <section class="form-intro">
-      <h2 class="order-title">Get your Quote</h2>
-      <p>Fill in your name, your order details, and hit send — we’ll take care of the rest!</p>
+
+        <h1 class="quote-title">
+            Request a Quote
+        </h1>
+
+        <p class="quote-intro">
+            Tell us what you'd like to order and we'll prepare
+            a personalised quote for you. All prices listed are
+            starting prices and final quotations depend on your
+            design requirements.
+        </p>
+
     </section>
 
-    <form id="order-form" class="order-form">
-      <section class="form-section">
-        <h3>Customer Information</h3>
 
-        <div class="form-group">
-          <label for="full-name">Full Name</label>
-          <input type="text" id="full-name" name="full-name" required>
-        </div>
 
-        <div class="form-group">
-          <label for="contact-number">Contact Number</label>
-          <input type="tel" id="contact-number" name="contact-number" required>
-        </div>
+    <!-- ====================================== -->
+    <!-- QUOTE FORM -->
+    <!-- ====================================== -->
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-      </section>
+    <form id="quote-form" class="quote-form">
 
-      <section class="form-section">
-        <h3>Order Details</h3>
+        <!-- ====================================== -->
+        <!-- CUSTOMER INFORMATION -->
+        <!-- ====================================== -->
 
-        <div class="form-group">
-          <label>Type of Baked Good</label>
-          <p class="field-help">(You can select both)</p>
+        <section class="form-section">
 
-          <div class="checkbox-group">
-            <label class="checkbox-item" for="cake-checkbox">
-              <input type="checkbox" id="cake-checkbox" name="product-type" value="cake">
-              <span>Cake</span>
-            </label>
+            <h2>1. Customer Information</h2>
 
-            <label class="checkbox-item" for="cupcake-checkbox">
-              <input type="checkbox" id="cupcake-checkbox" name="product-type" value="cupcake">
-              <span>Cupcakes</span>
-            </label>
-          </div>
-        </div>
+            <!-- customer information fields -->
 
-        <div class="form-group">
-          <label for="flavour">Flavor Selection</label>
-          <select id="flavour" name="flavour">
-            <option value="selectoption">Select Flavour</option>
-            <option value="chocolate">Chocolate</option>
-            <option value="vanilla">Vanilla</option>
-            <option value="red velvet">Red Velvet</option>
-            <option value="carrot">Carrot</option>
-            <option value="strawberry">Strawberry</option>
-            <option value="banana">Banana</option>
-            <option value="coffee">Coffee</option>
-            <option value="marble">Marble</option>
-            <option value="cheese">Cheese</option>
-          </select>
-        </div>
+        </section>
 
-        <div class="form-group">
-          <label for="filling">Filling Selection</label>
-          <select id="filling" name="filling">
-            <option value="selectoption">Select Filling</option>
-            <option value="buttercream">Buttercream</option>
-            <option value="whipped-cream">Whipped Cream</option>
-            <option value="fruit-jam">Fruit Jam</option>
-            <option value="cream-cheese">Cream Cheese</option>
-            <option value="chocolate-ganache">Chocolate Ganache</option>
-          </select>
-        </div>
 
-        <div class="form-group">
-          <label for="design-type">Design Type</label>
-          <select id="design-type" name="design-type">
-            <option value="selectoption">Select Design Type</option>
-            <option value="fondant">Fondant</option>
-            <option value="buttercream">Buttercream</option>
-            <option value="icing">Icing</option>
-          </select>
-        </div>
 
-        <div class="form-group">
-          <label for="cake-size">Cake Size</label>
-          <select id="cake-size" name="cake-size">
-            <option value="selectoption">Select Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-        </div>
+        <!-- ====================================== -->
+        <!-- YOUR ORDER -->
+        <!-- ====================================== -->
 
-        <div class="form-group">
-          <label for="cupcake-topping">Cupcake Topping</label>
-          <select id="cupcake-topping" name="cupcake-topping">
-            <option value="">Select Topping</option>
-            <option value="simpleSwirl">Simple Swirl</option>
-            <option value="bespoke">Bespoke</option>
-            <option value="ediblePrint">Edible Print</option>
-            <option value="acrylicTopper">Acrylic Topper</option>
-            <option value="fondant">Fondant</option>
-          </select>
-        </div>
+        <section class="form-section">
 
-        <div class="form-group">
-          <label for="cupcake-quantity">Number of Cupcakes</label>
-          <input type="number" id="cupcake-quantity" name="cupcake-quantity" min="1" value="1">
-        </div>
+            <h2>2. Your Order</h2>
 
-        <div class="form-group">
-          <label for="design">Design Description</label>
-          <textarea id="design" name="design" rows="4" required></textarea>
-        </div>
-      </section>
+            <p class="section-intro">
+                Select everything you'd like to order.
+                You can choose more than one option.
+            </p>
 
-      <section class="form-section">
-        <h3>Customization Options</h3>
+            <!-- PRODUCTS -->
 
-        <div class="form-group">
-          <label for="color-scheme">Color Scheme</label>
-          <input type="text" id="color-scheme" name="color-scheme">
-        </div>
+            <!-- CAKE DETAILS -->
 
-        <div class="form-group">
-          <label for="message">Personalized Message</label>
-          <input type="text" id="message" name="message">
-        </div>
+            <!-- CUPCAKE DETAILS -->
 
-        <div class="form-group">
-          <label for="dietary">Dietary Restrictions</label>
-          <textarea id="dietary" name="dietary" rows="3"></textarea>
-        </div>
-      </section>
+            <!-- MINI CAKE DETAILS -->
 
-      <section class="form-section">
-        <h3>Event Details</h3>
+            <!-- GOURMET COOKIE DETAILS -->
 
-        <div class="form-group">
-          <label for="occasion">Occasion Type</label>
-          <select id="occasion" name="occasion">
-            <option value="birthday">Birthday</option>
-            <option value="wedding">Wedding</option>
-            <option value="anniversary">Anniversary</option>
-            <option value="anniversary">Other</option>
-          </select>
-        </div>
+            <!-- DESIGN DESCRIPTION -->
 
-        <div class="date-time-group">
-          <div class="form-group">
-            <label for="event-date">Event Date</label>
-            <input type="date" id="event-date" name="event-date" required>
-          </div>
+        </section>
 
-          <div class="form-group">
-            <label for="event-time">Event Time</label>
-            <input type="time" id="event-time" name="event-time" required>
-          </div>
-        </div>
-      </section>
 
-      <section class="form-section">
-        <h3>Terms and Conditions</h3>
 
-        <div class="form-group">
-          <label for="payment">Payment Details</label>
-          <input type="text" id="payment" name="payment" value="EFTs only" disabled>
-        </div>
+        <!-- ====================================== -->
+        <!-- PERSONALISATION -->
+        <!-- ====================================== -->
 
-        <div class="form-group">
-          <label for="cancellation">Cancellation Policy</label>
-          <textarea id="cancellation" name="cancellation" rows="3" disabled>Cancellations must be made within 24 hours of placing an order.</textarea>
-        </div>
+        <section class="form-section">
 
-        <div class="form-group terms-group">
-          <label class="checkbox-item terms-label" for="terms">
-            <input type="checkbox" id="terms" name="terms" required>
-            <span>I agree to the terms and conditions</span>
-          </label>
-        </div>
+            <h2>3. Personalisation</h2>
 
-        <div class="total-price-wrap">
-          <h3>Total Price: R<span id="total-price">0.00</span></h3>
-        </div>
+            <!-- colour scheme -->
 
-        <button id="submitOrder" class="submit-btn" type="submit">Submit Order</button>
-      </section>
+            <!-- message -->
+
+            <!-- dietary -->
+
+        </section>
+
+
+
+        <!-- ====================================== -->
+        <!-- EVENT DETAILS -->
+        <!-- ====================================== -->
+
+        <section class="form-section">
+
+            <h2>4. Event Details</h2>
+
+            <!-- occasion -->
+
+            <!-- date -->
+
+            <!-- time -->
+
+        </section>
+
+
+
+        <!-- ====================================== -->
+        <!-- TERMS -->
+        <!-- ====================================== -->
+
+        <section class="form-section">
+
+            <h2>5. Terms &amp; Conditions</h2>
+
+            <!-- payment -->
+
+            <!-- cancellation -->
+
+            <!-- terms checkbox -->
+
+            <!-- submit button -->
+
+        </section>
+
     </form>
-  </main>
+
+</main>
 
   <footer class="footer">
     <div class="footer__logo">
