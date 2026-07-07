@@ -128,35 +128,103 @@
 </header>
 
   <main class="form-page">
-    <section class="form-intro contact-intro">
-      <h2>Contact Us</h2>
+
+    <!-- ====================================== -->
+    <!-- PAGE INTRO -->
+    <!-- ====================================== -->
+
+    <section class="form-section">
+
+        <h2>Review Your Quote Request</h2>
+
+        <p class="section-intro">
+            Please review your information before sending your quote request to Felicia Bakes via WhatsApp.
+        </p>
+
     </section>
+
+    <!-- ====================================== -->
+    <!-- CUSTOMER DETAILS -->
+    <!-- ====================================== -->
+
+    <section class="form-section">
+
+        <h3>Your Details</h3>
+
+        <div class="summary-list">
+
+            <p><strong>Name</strong></p>
+            <span id="review-name"></span>
+
+            <p><strong>Contact Number</strong></p>
+            <span id="review-phone"></span>
+
+            <p><strong>Email</strong></p>
+            <span id="review-email"></span>
+
+        </div>
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- ORDER DETAILS -->
+    <!-- ====================================== -->
+
+    <section class="form-section">
+
+        <h3>Your Order</h3>
+
+        <div id="order-summary">
+
+            <!-- JavaScript will build the selected products here -->
+
+        </div>
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- DESIGN -->
+    <!-- ====================================== -->
+
+    <section class="form-section">
+
+        <h3>Design Request</h3>
+
+        <p id="review-design"></p>
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- DISCLAIMER -->
+    <!-- ====================================== -->
 
     <section class="form-section disclaimer-card">
-      <p>
-        Please note: This is just a quote. The final price may vary depending on
-        ingredients and design.
-      </p>
+
+        <p>
+            Every cake is handmade and made to order.
+            Final pricing depends on your chosen flavour, size, decorations and custom design requirements.
+        </p>
+
     </section>
 
-    <section class="form-section contact-summary">
-      <h3>Review Your Order</h3>
-      <p class="contact-summary-text">
-        Please review your order before sending it via WhatsApp.
-      </p>
+    <!-- ====================================== -->
+    <!-- CTA -->
+    <!-- ====================================== -->
 
-      <div class="summary-list">
-        <p><strong>Name:</strong> <span id="full-name"></span></p>
-        <p><strong>Email:</strong> <span id="email"></span></p>
-        <p><strong>Order:</strong> <span id="orderDetails"></span></p>
-        <p><strong>Order Number:</strong> <span id="order-number"></span></p>
-      </div>
+    <section class="form-section">
 
-      <button id="sendWhatsapp" class="submit-btn" type="button">
-        Message Us on WhatsApp
-      </button>
+        <button
+            id="sendWhatsapp"
+            class="submit-btn"
+            type="button">
+
+            Send Quote Request via WhatsApp
+
+        </button>
+
     </section>
-  </main>
+
+</main>
 
   <footer class="footer">
     <div class="footer__logo">
