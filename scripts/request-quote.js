@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // ============================
 
     const flavour = document.getElementById("flavour");
-    const filling = document.getElementById("filling");
     const cakeSize = document.getElementById("cake-size");
     const designType = document.getElementById("design-type");
 
@@ -69,4 +68,94 @@ document.addEventListener("DOMContentLoaded", () => {
     const occasion = document.getElementById("occasion");
     const eventDate = document.getElementById("event-date");
     const eventTime = document.getElementById("event-time");
+
+    // ============================
+// PRODUCT GROUPS
+// ============================
+
+const cakeOptions = document.getElementById("cake-options");
+const cupcakeOptions = document.getElementById("cupcake-options");
+const miniCakeOptions = document.getElementById("mini-cake-options");
+const cookieOptions = document.getElementById("cookie-options");
+
+// Hide everything on page load
+cakeOptions.style.display = "none";
+cupcakeOptions.style.display = "none";
+miniCakeOptions.style.display = "none";
+cookieOptions.style.display = "none";
+
+// Toggle each section independently
+cakeCheckbox.addEventListener("change", () => {
+    cakeOptions.style.display = cakeCheckbox.checked ? "block" : "none";
+});
+
+cupcakeCheckbox.addEventListener("change", () => {
+    cupcakeOptions.style.display = cupcakeCheckbox.checked ? "block" : "none";
+});
+
+miniCakeCheckbox.addEventListener("change", () => {
+    miniCakeOptions.style.display = miniCakeCheckbox.checked ? "block" : "none";
+});
+
+cookieCheckbox.addEventListener("change", () => {
+    cookieOptions.style.display = cookieCheckbox.checked ? "block" : "none";
+});
+
+// ============================
+// REVIEW ORDER
+// ============================
+
+const reviewButton = document.getElementById("review-order-btn");
+
+reviewButton.addEventListener("click", () => {
+
+    const quoteRequest = {
+
+        customer: {
+            name: fullName.value,
+            phone: contactNumber.value,
+            email: email.value
+        },
+
+        products: {
+
+            cake: {
+                selected: cakeCheckbox.checked,
+                flavour: flavour.value,
+                finish: designType.value,
+                size: cakeSize.value
+            },
+
+            cupcakes: {
+                selected: cupcakeCheckbox.checked,
+                style: cupcakeTopping.value,
+                quantity: cupcakeQuantity.value
+            },
+
+            miniCakes: {
+                selected: miniCakeCheckbox.checked,
+                flavour: miniCakeFlavour.value,
+                quantity: miniCakeQuantity.value
+            },
+
+            cookies: {
+                selected: cookieCheckbox.checked,
+                flavour: cookieFlavour.value,
+                quantity: cookieQuantity.value
+            }
+
+        },
+
+        design: design.value
+
+    };
+
+    localStorage.setItem(
+        "quoteRequest",
+        JSON.stringify(quoteRequest)
+    );
+
+    window.location.href = "review-order.html";
+
+});
 });
