@@ -1915,4 +1915,130 @@ label[for="terms"] {
 
 }
 
+/* =========================
+   ORDER JOURNEY
+========================= */
+
+.order-journey {
+    background: #fff;
+    border-radius: 30px;
+    padding: 50px;
+    margin-top: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.order-journey h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #6A4E77;
+    font-size: 2rem;
+}
+
+.journey-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.timeline-step {
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+    position: relative;
+}
+
+.step-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #F8EEF3;
+    border: 2px solid #E7D9E1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 15px;
+    transition: all 0.3s ease;
+}
+
+.timeline-step.completed .step-circle {
+    background: #FFE8F0;
+    border-color: #F65B9A;
+}
+
+.timeline-step.active .step-circle {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+    background: #FFF7EA;
+    border: 3px solid #D4AF37;
+    box-shadow: 0 0 30px rgba(212,175,55,.25);
+    transform: scale(1.1);
+}
+
+.timeline-step p {
+    font-size: 0.9rem;
+    color: #5F4B66;
+    font-weight: 600;
+}
+
+/* =========================
+   CURRENT STATUS
+========================= */
+
+.current-status-card {
+    background: #fff;
+    border-radius: 30px;
+    padding: 40px;
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.status-icon {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #FFE8F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.status-label {
+    display: block;
+    color: #F65B9A;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.status-content h3 {
+    color: #5F2D54;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.status-content p {
+    color: #6A6A6A;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.status-message {
+    background: #FFF1F6;
+    padding: 20px;
+    border-radius: 16px;
+    color: #6A4E77;
+    font-weight: 500;
+}
+
 }
