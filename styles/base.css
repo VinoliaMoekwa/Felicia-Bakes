@@ -25,6 +25,7 @@ body {
 /* Pushes footer to the bottom on shorter pages */
 main {
   flex: 1;
+  width: fit-content;
 }
 body {
   font-family: 'Istok Web', sans-serif;
