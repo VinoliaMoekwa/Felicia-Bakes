@@ -101,15 +101,32 @@
 
 
 <body>
-   <nav class="navigation" id="mobileNav">
+  <header class="header">
+    <div class="header-top">
+      <div class="logo">
+        <img src="images/felicia-bakes-logo.png" alt="Felicia Bakes custom cakes and cupcakes logo">
+      </div>
+
+      <nav class="navigation" id="mobileNav">
       <a href="index.html" class="nav-link">Home</a>
       <a href="pricing.html" class="nav-link">Pricing</a>
       <a href="request-quote.html" class="nav-link">Request Quote</a>
       <a href="tracking.html" class="nav-link">Track Order</a>
     
 
-    </nav>
-</div>
+      </nav>
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/felicia__bakes/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@felicia.bakes" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/27813315267" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
 
   <main class="form-page">
     <section class="form-intro">
@@ -231,6 +248,7 @@
 <p>&copy; 2024 Felicia Bakes. All rights reserved.</p>
 
 </footer>
+  <script src="scripts/hamburger.js"></script>
   <script src="scripts/tracking.js"></script>
 
 </body>
