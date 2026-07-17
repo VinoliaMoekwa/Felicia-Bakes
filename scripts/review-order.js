@@ -125,50 +125,124 @@ orderSummary.innerHTML = summaryHTML;
 // WHATSAPP
 // ======================================
 
-document.getElementById("sendWhatsapp").addEventListener("click", () => {
+const submitButton = document.getElementById("sendWhatsapp");
+const orderConfirmation = document.getElementById("orderConfirmation");
 
-    let message = `Hello Felicia! I'd like to request a quote.%0A%0A`;
-
-    message += `*Customer Details*%0A`;
-    message += `Name: ${quoteRequest.customer.name}%0A`;
-    message += `Phone: ${quoteRequest.customer.phone}%0A`;
-    message += `Email: ${quoteRequest.customer.email}%0A%0A`;
-
-    message += `*Products*%0A`;
-
-    if (quoteRequest.products.cake.selected) {
-        message += `🍰 Cake%0A`;
-        message += `• Flavour: ${quoteRequest.products.cake.flavour}%0A`;
-        message += `• Finish: ${quoteRequest.products.cake.finish}%0A`;
-        message += `• Size: ${quoteRequest.products.cake.size}%0A%0A`;
-    }
-
-    if (quoteRequest.products.cupcakes.selected) {
-        message += `🧁 Cupcakes%0A`;
-        message += `• Style: ${quoteRequest.products.cupcakes.style}%0A`;
-        message += `• Quantity: ${quoteRequest.products.cupcakes.quantity}%0A%0A`;
-    }
+function buildOrderPayload() {
+    const selectedProducts = [];
 
     if (quoteRequest.products.miniCakes.selected) {
-        message += `🎂 Mini Cakes%0A`;
-        message += `• Flavour: ${quoteRequest.products.miniCakes.flavour}%0A`;
-        message += `• Quantity: ${quoteRequest.products.miniCakes.quantity}%0A%0A`;
+        selectedProducts.push(`Mini cakes: ${quoteRequest.products.miniCakes.flavour}, quantity ${quoteRequest.products.miniCakes.quantity}`);
     }
 
     if (quoteRequest.products.cookies.selected) {
-        message += `🍪 Gourmet Cookies%0A`;
-        message += `• Flavour: ${quoteRequest.products.cookies.flavour}%0A`;
-        message += `• Quantity: ${quoteRequest.products.cookies.quantity}%0A%0A`;
+        selectedProducts.push(`Gourmet cookies: ${quoteRequest.products.cookies.flavour}, quantity ${quoteRequest.products.cookies.quantity}`);
     }
 
-    message += `*Design Request*%0A`;
+    return {
+        name: quoteRequest.customer.name,
+        email: quoteRequest.customer.email,
+        cakeSelected: quoteRequest.products.cake.selected,
+        cupcakeSelected: quoteRequest.products.cupcakes.selected,
+        flavour: quoteRequest.products.cake.selected ? quoteRequest.products.cake.flavour : null,
+        filling: null,
+        cakeSize: quoteRequest.products.cake.selected ? quoteRequest.products.cake.size : null,
+        designType: quoteRequest.products.cake.selected ? quoteRequest.products.cake.finish : null,
+        cupcakeTopping: quoteRequest.products.cupcakes.selected ? quoteRequest.products.cupcakes.style : null,
+        cupcakeQuantity: quoteRequest.products.cupcakes.selected ? quoteRequest.products.cupcakes.quantity : 0,
+        colorScheme: null,
+        message: [quoteRequest.design, ...selectedProducts].filter(Boolean).join("\n"),
+        dietary: null,
+        occasion: null,
+        eventDate: null,
+        eventTime: null,
+        totalPrice: 0
+    };
+}
+
+function openWhatsApp(orderNumber) {
+
+    let message = `Hello Felicia! I'd like to request a quote.\n\n`;
+    message += `*Order Number:* ${orderNumber}\n\n`;
+
+    message += `*Customer Details*\n`;
+    message += `Name: ${quoteRequest.customer.name}\n`;
+    message += `Phone: ${quoteRequest.customer.phone}\n`;
+    message += `Email: ${quoteRequest.customer.email}\n\n`;
+
+    message += `*Products*\n`;
+
+    if (quoteRequest.products.cake.selected) {
+        message += `🍰 Cake\n`;
+        message += `• Flavour: ${quoteRequest.products.cake.flavour}\n`;
+        message += `• Finish: ${quoteRequest.products.cake.finish}\n`;
+        message += `• Size: ${quoteRequest.products.cake.size}\n\n`;
+    }
+
+    if (quoteRequest.products.cupcakes.selected) {
+        message += `🧁 Cupcakes\n`;
+        message += `• Style: ${quoteRequest.products.cupcakes.style}\n`;
+        message += `• Quantity: ${quoteRequest.products.cupcakes.quantity}\n\n`;
+    }
+
+    if (quoteRequest.products.miniCakes.selected) {
+        message += `🎂 Mini Cakes\n`;
+        message += `• Flavour: ${quoteRequest.products.miniCakes.flavour}\n`;
+        message += `• Quantity: ${quoteRequest.products.miniCakes.quantity}\n\n`;
+    }
+
+    if (quoteRequest.products.cookies.selected) {
+        message += `🍪 Gourmet Cookies\n`;
+        message += `• Flavour: ${quoteRequest.products.cookies.flavour}\n`;
+        message += `• Quantity: ${quoteRequest.products.cookies.quantity}\n\n`;
+    }
+
+    message += `*Design Request*\n`;
     message += `${quoteRequest.design}`;
 
     const phoneNumber = "27813315267";
 
     window.open(
-        `https://wa.me/${phoneNumber}?text=${message}`,
+        `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`,
         "_blank"
     );
+}
+
+submitButton.addEventListener("click", async () => {
+    const existingOrderNumber = localStorage.getItem("quoteOrderNumber");
+
+    if (existingOrderNumber) {
+        openWhatsApp(existingOrderNumber);
+        return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Creating your order...";
+
+    try {
+        const response = await fetch("https://felicia-bakes-backend.onrender.com/orders", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(buildOrderPayload())
+        });
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.message || "Could not create your order.");
+        }
+
+        localStorage.setItem("quoteOrderNumber", data.orderNumber);
+        orderConfirmation.hidden = false;
+        orderConfirmation.innerHTML = `<p><strong>Your tracking number is ${data.orderNumber}.</strong></p><p>Please save it to track your order.</p>`;
+        submitButton.textContent = "Open WhatsApp with Order Number";
+        submitButton.disabled = false;
+        openWhatsApp(data.orderNumber);
+    } catch (error) {
+        console.error(error);
+        orderConfirmation.hidden = false;
+        orderConfirmation.textContent = "We could not create your order. Please try again.";
+        submitButton.textContent = "Send Quote Request via WhatsApp";
+        submitButton.disabled = false;
+    }
 
 });
