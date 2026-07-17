@@ -152,43 +152,43 @@
     </section>
 
     <!-- Cake Journey Timeline -->
-<section class="order-journey">
+<section class="order-journey" id="orderJourney" hidden>
 
     <h3>Your Cake Journey</h3>
 
     <div class="journey-timeline">
 
-        <div class="timeline-step completed">
+        <div class="timeline-step" data-status="Quote Requested">
             <div class="step-circle">📝</div>
             <p>Quote Requested</p>
         </div>
 
-        <div class="timeline-step completed">
+        <div class="timeline-step" data-status="Deposit Paid">
             <div class="step-circle">💳</div>
             <p>Deposit Paid</p>
         </div>
 
-        <div class="timeline-step completed">
+        <div class="timeline-step" data-status="Design Confirmed">
             <div class="step-circle">✏️</div>
             <p>Design Confirmed</p>
         </div>
 
-        <div class="timeline-step active">
+        <div class="timeline-step" data-status="Baking">
             <div class="step-circle">🎂</div>
             <p>Baking</p>
         </div>
 
-        <div class="timeline-step">
+        <div class="timeline-step" data-status="Decorating">
             <div class="step-circle">🧁</div>
             <p>Decorating</p>
         </div>
 
-        <div class="timeline-step">
+        <div class="timeline-step" data-status="Ready for Collection">
             <div class="step-circle">🎁</div>
             <p>Ready for Collection</p>
         </div>
 
-        <div class="timeline-step">
+        <div class="timeline-step" data-status="Collected">
             <div class="step-circle">🛍️</div>
             <p>Collected</p>
         </div>
@@ -198,9 +198,9 @@
 </section>
 
 <!-- Current Status Card -->
-<section class="current-status-card">
+<section class="current-status-card" id="currentStatus" hidden>
 
-    <div class="status-icon">
+    <div class="status-icon" id="statusIcon">
         🎂
     </div>
 
@@ -210,16 +210,11 @@
             CURRENT STATUS
         </span>
 
-        <h3>Baking in Progress</h3>
+        <h3 id="statusTitle"></h3>
 
-        <p>
-            Your cake layers are in the oven and rising to perfection.
-            We're preparing something beautiful for your special day.
-        </p>
+        <p id="statusDescription"></p>
 
-        <div class="status-message">
-             We treat every cake as if it were for our own celebration.
-        </div>
+        <div class="status-message" id="statusMessage"></div>
 
     </div>
 
