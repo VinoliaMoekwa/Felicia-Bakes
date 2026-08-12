@@ -3,382 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Felicia Bakes Email Signature</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            background: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .signature {
+            width: 600px;
+            max-width: 100%;
+            display: flex;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #fff0f5;
+            color: #4b3552;
+        }
+
+        /* LEFT BRAND PANEL */
+        .signature-brand {
+            width: 160px;
+            min-height: 220px;
+            background: #df73a5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px 10px;
+            box-sizing: border-box;
+        }
+
+        .signature-brand img {
+            width: 90px;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .tagline-side {
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            line-height: 1.5;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        /* RIGHT INFORMATION PANEL */
+        .signature-info {
+            flex: 1;
+            padding: 18px 20px;
+            box-sizing: border-box;
+        }
+
+        .signature-name {
+            margin: 0 0 3px 0;
+            font-size: 22px;
+            font-weight: bold;
+            color: #e21b68;
+        }
+
+        .signature-title {
+            margin: 0 0 7px 0;
+            font-size: 13px;
+            color: #6b5572;
+        }
+
+        .signature-tagline {
+            margin: 0 0 14px 0;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            color: #a987c9;
+        }
+
+        .contact-row {
+            margin-bottom: 8px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .contact-row i {
+            width: 17px;
+            margin-right: 5px;
+            color: #e21b68;
+        }
+
+        .contact-row a {
+            color: #4b3552;
+            text-decoration: none;
+        }
+
+        /* SOCIAL ICONS */
+        .social-icons {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .social-icons a {
+            color: #e21b68;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .social-icons a:hover {
+            color: #a987c9;
+        }
+
+        /* BOTTOM BRAND LINE */
+        .signature-footer {
+            width: 600px;
+            max-width: 100%;
+            text-align: right;
+            padding-top: 7px;
+            font-size: 9px;
+            letter-spacing: 1.2px;
+            color: #a987c9;
+        }
+
+        .signature-brand {
+    width: 160px;
+    min-height: 220px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.tagline-side {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    color: #e21b68;
+    text-transform: uppercase;
+}
+
+        @media (max-width: 600px) {
+            .signature {
+                flex-direction: column;
+            }
+
+            .signature-brand {
+                width: 100%;
+                min-height: 130px;
+            }
+
+            .signature-brand img {
+                width: 70px;
+                margin-bottom: 10px;
+            }
+
+            .signature-info {
+                width: 100%;
+            }
+
+            .signature-footer {
+                width: 100%;
+            }
+        }
+
+        
+    </style>
 </head>
 
-<body style="margin:0; padding:20px; background:#ffffff;">
+<body>
 
-<!-- ================= EMAIL SIGNATURE ================= -->
+    <div class="signature">
 
-<table
-    cellpadding="0"
-    cellspacing="0"
-    border="0"
-    style="
-        width:100%;
-        max-width:620px;
-        font-family:Arial, Helvetica, sans-serif;
-        color:#4b3b52;
-    "
->
-    <tr>
-
-        <!-- ================= LEFT BRAND PANEL ================= -->
-
-        <td
-            width="155"
-            valign="middle"
-            style="
-                width:155px;
-                background:#e078a5;
-                border-radius:18px 0 0 18px;
-                padding:22px 15px;
-                text-align:center;
-            "
-        >
+        <!-- LEFT BRANDING -->
+        <div class="signature-brand">
 
             <img
                 src="https://feliciabakes.co.za/images/felicia-bakes-logo.png"
                 alt="Felicia Bakes"
-                width="110"
-                style="
-                    display:block;
-                    width:110px;
-                    height:auto;
-                    margin:0 auto 12px auto;
-                "
             >
 
-            <div
-                style="
-                    font-size:10px;
-                    font-weight:bold;
-                    letter-spacing:2px;
-                    color:#ffffff;
-                    line-height:1.5;
-                "
-            >
-                EVERYTHING<br>
-                SWEET &amp; PRETTY
+            <div class="tagline-side">
+                Everything<br>
+                Sweet &amp; Pretty
             </div>
 
-        </td>
+        </div>
 
 
-        <!-- ================= MAIN CONTENT ================= -->
+        <!-- CONTACT INFORMATION -->
+        <div class="signature-info">
 
-        <td
-            valign="middle"
-            style="
-                background:#fff1f6;
-                border-radius:0 18px 18px 0;
-                padding:20px 24px;
-            "
-        >
-
-            <!-- Name -->
-
-            <div
-                style="
-                    font-size:24px;
-                    line-height:1.2;
-                    font-weight:bold;
-                    color:#e51f68;
-                    margin-bottom:4px;
-                "
-            >
+            <div class="signature-name">
                 Felicia Bakes
             </div>
 
-            <!-- Job title -->
-
-            <div
-                style="
-                    font-size:13px;
-                    color:#705c78;
-                    margin-bottom:5px;
-                "
-            >
+            <div class="signature-title">
                 Baker &amp; Founder
             </div>
 
-            <!-- Tagline -->
-
-            <div
-                style="
-                    font-size:11px;
-                    font-weight:bold;
-                    letter-spacing:1.5px;
-                    color:#a987c9;
-                    margin-bottom:14px;
-                "
-            >
+            <div class="signature-tagline">
                 EVERYTHING SWEET &amp; PRETTY
             </div>
 
 
-            <!-- Decorative line -->
+            <!-- PHONE -->
+            <div class="contact-row">
+                <i class="fa-solid fa-phone"></i>
 
-            <table
-                cellpadding="0"
-                cellspacing="0"
-                border="0"
-                style="margin-bottom:14px;"
-            >
-                <tr>
-                    <td
-                        style="
-                            width:55px;
-                            height:4px;
-                            background:#e51f68;
-                            border-radius:5px;
-                            font-size:0;
-                            line-height:0;
-                        "
-                    >
-                        &nbsp;
-                    </td>
-
-                    <td style="width:7px;">&nbsp;</td>
-
-                    <td
-                        style="
-                            width:18px;
-                            height:4px;
-                            background:#b693d1;
-                            border-radius:5px;
-                            font-size:0;
-                            line-height:0;
-                        "
-                    >
-                        &nbsp;
-                    </td>
-                </tr>
-            </table>
+                <a href="tel:+27813315267">
+                    +27 81 331 5267
+                </a>
+            </div>
 
 
-            <!-- ================= CONTACT DETAILS ================= -->
+            <!-- EMAIL -->
+            <div class="contact-row">
+                <i class="fa-solid fa-envelope"></i>
 
-            <table
-                cellpadding="0"
-                cellspacing="0"
-                border="0"
-                style="
-                    font-size:12px;
-                    line-height:1.8;
-                    color:#4b3b52;
-                "
-            >
+                <a href="mailto:info@feliciabakes.co.za">
+                    info@feliciabakes.co.za
+                </a>
+            </div>
 
-                <!-- Phone -->
 
-                <tr>
-                    <td
-                        width="24"
-                        valign="middle"
-                        style="
-                            width:24px;
-                            font-size:15px;
-                            color:#e51f68;
-                        "
-                    >
-                        ☎
-                    </td>
+            <!-- WEBSITE -->
+            <div class="contact-row">
+                <i class="fa-solid fa-globe"></i>
 
-                    <td valign="middle">
-                        <a
-                            href="tel:+27813315267"
-                            style="
-                                color:#4b3b52;
-                                text-decoration:none;
-                            "
-                        >
-                            +27 81 331 5267
-                        </a>
-                    </td>
-                </tr>
+                <a href="https://feliciabakes.co.za" target="_blank">
+                    www.feliciabakes.co.za
+                </a>
+            </div>
+
+
+            <!-- SOCIAL MEDIA -->
+            <div class="social-icons">
+
+                <!-- Instagram -->
+                <a
+                    href="https://www.instagram.com/felicia__bakes/"
+                    target="_blank"
+                    aria-label="Instagram"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+
+                <!-- TikTok -->
+                <a
+                    href="https://www.tiktok.com/@felicia.bakes"
+                    target="_blank"
+                    aria-label="TikTok"
+                >
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+
+                <!-- WhatsApp -->
+                <a
+                    href="https://wa.me/27813315267"
+                    target="_blank"
+                    aria-label="WhatsApp"
+                >
+                    <i class="fab fa-whatsapp"></i>
+                </a>
 
 
                 <!-- Email -->
+                <a
+                    href="mailto:info@feliciabakes.co.za"
+                    aria-label="Email"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
 
-                <tr>
-                    <td
-                        width="24"
-                        valign="middle"
-                        style="
-                            width:24px;
-                            font-size:15px;
-                            color:#e51f68;
-                        "
-                    >
-                        ✉
-                    </td>
+            </div>
 
-                    <td valign="middle">
-                        <a
-                            href="mailto:info@feliciabakes.co.za"
-                            style="
-                                color:#4b3b52;
-                                text-decoration:none;
-                            "
-                        >
-                            info@feliciabakes.co.za
-                        </a>
-                    </td>
-                </tr>
+        </div>
+
+    </div>
 
 
-                <!-- Website -->
-
-                <tr>
-                    <td
-                        width="24"
-                        valign="middle"
-                        style="
-                            width:24px;
-                            font-size:15px;
-                            color:#e51f68;
-                        "
-                    >
-                        ◉
-                    </td>
-
-                    <td valign="middle">
-                        <a
-                            href="https://www.feliciabakes.co.za"
-                            style="
-                                color:#4b3b52;
-                                text-decoration:none;
-                            "
-                        >
-                            www.feliciabakes.co.za
-                        </a>
-                    </td>
-                </tr>
-
-            </table>
-
-
-            <!-- ================= SOCIAL LINKS ================= -->
-
-            <table
-                cellpadding="0"
-                cellspacing="0"
-                border="0"
-                style="margin-top:13px;"
-            >
-                <tr>
-
-                    <!-- Instagram -->
-
-                    <td style="padding-right:7px;">
-                        <a
-                            href="https://www.instagram.com/felicia__bakes/"
-                            style="
-                                display:inline-block;
-                                background:#e51f68;
-                                color:#ffffff;
-                                text-decoration:none;
-                                font-size:11px;
-                                font-weight:bold;
-                                padding:6px 9px;
-                                border-radius:8px;
-                            "
-                        >
-                            IG
-                        </a>
-                    </td>
-
-
-                    <!-- TikTok -->
-
-                    <td style="padding-right:7px;">
-                        <a
-                            href="https://www.tiktok.com/@felicia.bakes"
-                            style="
-                                display:inline-block;
-                                background:#4b3b52;
-                                color:#ffffff;
-                                text-decoration:none;
-                                font-size:11px;
-                                font-weight:bold;
-                                padding:6px 9px;
-                                border-radius:8px;
-                            "
-                        >
-                            TT
-                        </a>
-                    </td>
-
-
-                    <!-- WhatsApp -->
-
-                    <td style="padding-right:7px;">
-                        <a
-                            href="https://wa.me/27813315267"
-                            style="
-                                display:inline-block;
-                                background:#b693d1;
-                                color:#ffffff;
-                                text-decoration:none;
-                                font-size:11px;
-                                font-weight:bold;
-                                padding:6px 9px;
-                                border-radius:8px;
-                            "
-                        >
-                            WA
-                        </a>
-                    </td>
-
-
-                    <!-- Website -->
-
-                    <td>
-                        <a
-                            href="https://www.feliciabakes.co.za"
-                            style="
-                                display:inline-block;
-                                background:#ffffff;
-                                color:#e51f68;
-                                text-decoration:none;
-                                font-size:11px;
-                                font-weight:bold;
-                                padding:6px 9px;
-                                border:1px solid #e51f68;
-                                border-radius:8px;
-                            "
-                        >
-                            WEB
-                        </a>
-                    </td>
-
-                </tr>
-            </table>
-
-        </td>
-
-    </tr>
-
-
-    <!-- ================= BOTTOM BRAND BAR ================= -->
-
-    <tr>
-        <td
-            colspan="2"
-            style="
-                padding-top:8px;
-                text-align:right;
-                font-size:9px;
-                letter-spacing:1.5px;
-                color:#a987c9;
-            "
-        >
-            FELICIA BAKES &nbsp;•&nbsp; EVERYTHING SWEET &amp; PRETTY
-        </td>
-    </tr>
-
-</table>
+    <!-- FOOTER -->
+    <div class="signature-footer">
+        FELICIA BAKES &nbsp;•&nbsp; EVERYTHING SWEET &amp; PRETTY
+    </div>
 
 </body>
 </html>
