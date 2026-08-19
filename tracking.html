@@ -12,21 +12,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Page Title -->
-    <title>Track Your Order | Felicia Bakes</title>
+    <title>Order a Custom Cake | Felicia Bakes Pretoria</title>
 
     <!-- SEO -->
     <meta name="description"
-          content="Track your custom cake order from Felicia Bakes. Stay updated on your order's progress from confirmation through collection ">
+          content="Request a quote for your custom cake, cupcakes, bento cake, mini treats or DIY cake kit from Felicia Bakes. Complete our order form to start your celebration.">
 
     <meta name="keywords"
-          content="track cake order, Felicia Bakes order tracking, custom cake order status, Pretoria bakery">
+          content="order custom cake Pretoria, cake quote Pretoria, birthday cake order, bento cake order, custom cupcakes Pretoria, Felicia Bakes">
 
-    <meta name="author" content="Ntombi Moekwa">
+    <meta name="author" content="Oatle Technologies">
 
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, nofollow">
 
     <link rel="canonical"
-          href="https://feliciabakes.co.za/track-order.html">
+          href="https://feliciabakes.co.za/order.html">
 
     <!-- Theme Colour -->
     <meta name="theme-color" content="#ffc7d7">
@@ -35,19 +35,19 @@
     <meta property="og:type" content="website">
 
     <meta property="og:title"
-          content="Track Your Order | Felicia Bakes">
+          content="Order a Custom Cake | Felicia Bakes">
 
     <meta property="og:description"
-          content="Check the latest progress of your custom cake order from Felicia Bakes.">
+          content="Request a personalised quote for your custom cake, cupcakes, bento cake or mini treats.">
 
     <meta property="og:url"
-          content="https://feliciabakes.co.za/track-order.html">
+          content="https://feliciabakes.co.za/order.html">
 
     <meta property="og:image"
-          content="https://feliciabakes.co.za/images/felicia-bakes-logo.png">
+          content="https://feliciabakes.co.za/images/bento_diy_box.webp">
 
     <meta property="og:image:alt"
-          content="Felicia Bakes Logo">
+          content="Felicia Bakes Custom Cake">
 
     <meta property="og:site_name"
           content="Felicia Bakes">
@@ -55,17 +55,18 @@
     <meta property="og:locale"
           content="en_ZA">
 
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
+    <!-- Twitter/X -->
+    <meta name="twitter:card"
+          content="summary_large_image">
 
     <meta name="twitter:title"
-          content="Track Your Order | Felicia Bakes">
+          content="Order a Custom Cake | Felicia Bakes">
 
     <meta name="twitter:description"
-          content="Track the progress of your Felicia Bakes order.">
+          content="Request a personalised quote for your custom cake order.">
 
     <meta name="twitter:image"
-          content="https://feliciabakes.co.za/images/felicia-bakes-logo.png">
+          content="https://feliciabakes.co.za/images/bento_diy_box.webp">
 
     <!-- Favicon -->
     <link rel="icon"
@@ -91,6 +92,10 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- Swiper -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -99,159 +104,402 @@
 
 </head>
 
-
 <body>
   <header class="header">
-    <div class="header-top">
-      <div class="logo">
-        <img src="images/felicia-bakes-logo.png" alt="Felicia Bakes custom cakes and cupcakes logo">
-      </div>
+  <div class="header-top">
+    <div class="logo">
+      <img src="images/felicia-bakes-logo.png" alt="Felicia Bakes Logo">
+    </div>
 
-      <nav class="navigation" id="mobileNav">
+    <nav class="navigation" id="mobileNav">
       <a href="index.html" class="nav-link">Home</a>
       <a href="pricing.html" class="nav-link">Pricing</a>
       <a href="request-quote.html" class="nav-link">Request Quote</a>
       <a href="tracking.html" class="nav-link">Track Order</a>
+    </nav>
     
-
-      </nav>
-
-      <div class="social-icons">
-        <a href="https://www.instagram.com/felicia__bakes/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@felicia.bakes" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://wa.me/27813315267" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:info@feliciabakes.co.za">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:info@feliciabakes.co.za">
         <i class="fa-solid fa-envelope"></i>
     </a>
-      </div>
     </div>
+  </div>
 
-    <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
+  <div class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
 
   <main class="form-page">
-    <section class="form-intro">
-      <h2>Track Your Order</h2>
-      <p>Enter your order number to see the latest status.</p>
-    </section>
 
-    <section class="form-section">
-      <div class="form-group">
-        <input 
-          type="text" 
-          id="orderNumber" 
-          placeholder="Enter Order Number (e.g. FB001)"
-        >
-      </div>
+    <!-- ====================================== -->
+    <!-- PAGE INTRO -->
+    <!-- ====================================== -->
 
-      <button id="trackBtn" class="submit-btn">
-        Track Order
-      </button>
+   <section class="form-section">
 
-      <!-- IMPORTANT: use div instead of p -->
-      <div id="result"></div>
-    </section>
+    <!-- ====================================== -->
+<!-- CUSTOMER DETAILS -->
+<!-- ====================================== -->
 
-    <!-- Cake Journey Timeline -->
-<section class="order-journey" id="orderJourney" hidden>
+<section class="form-section">
 
-    <h3>Your Cake Journey</h3>
+    <h2>1. Your Details</h2>
 
-    <div class="journey-timeline">
+    <p class="section-intro">
+        Tell us how to contact you about your quote.
+    </p>
 
-        <div class="timeline-step" data-status="Quote Requested">
-            <div class="step-circle">📝</div>
-            <p>Quote Requested</p>
-        </div>
+    <div class="form-group">
 
-        <div class="timeline-step" data-status="Deposit Paid">
-            <div class="step-circle">💳</div>
-            <p>Deposit Paid</p>
-        </div>
+        <label for="full-name">
+            Full Name
+        </label>
 
-        <div class="timeline-step" data-status="Design Confirmed">
-            <div class="step-circle">✏️</div>
-            <p>Design Confirmed</p>
-        </div>
+        <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            placeholder="Enter your full name"
+            required>
 
-        <div class="timeline-step" data-status="Baking">
-            <div class="step-circle">🎂</div>
-            <p>Baking</p>
-        </div>
+    </div>
 
-        <div class="timeline-step" data-status="Decorating">
-            <div class="step-circle">🧁</div>
-            <p>Decorating</p>
-        </div>
+    <div class="form-group">
 
-        <div class="timeline-step" data-status="Ready for Collection">
-            <div class="step-circle">🎁</div>
-            <p>Ready for Collection</p>
-        </div>
+        <label for="contact-number">
+            Contact Number
+        </label>
 
-        <div class="timeline-step" data-status="Collected">
-            <div class="step-circle">🛍️</div>
-            <p>Collected</p>
-        </div>
+        <input
+            type="tel"
+            id="contact-number"
+            name="contact-number"
+            placeholder="e.g. 081 234 5678"
+            required>
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="email">
+            Email Address (Optional)
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required>
 
     </div>
 
 </section>
 
-<!-- Current Status Card -->
-<section class="current-status-card" id="currentStatus" hidden>
+    <h2>2. Your Order</h2>
 
-    <div class="status-icon" id="statusIcon">
-        🎂
+    <p class="section-intro">
+        Select everything you'd like to order. You can choose more than one item.
+    </p>
+
+    <!-- ====================================== -->
+    <!-- PRODUCTS -->
+    <!-- ====================================== -->
+
+    <div class="form-group">
+
+        <label>Products</label>
+
+        <div class="checkbox-group">
+
+            <label class="checkbox-item">
+                <input type="checkbox"
+                       id="cake-checkbox"
+                       name="product-type"
+                       value="cake">
+
+                <span>Cakes</span>
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox"
+                       id="cupcake-checkbox"
+                       name="product-type"
+                       value="cupcakes">
+
+                <span>Cupcakes</span>
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox"
+                       id="mini-cake-checkbox"
+                       name="product-type"
+                       value="mini-cakes">
+
+                <span>Mini Cakes</span>
+            </label>
+
+            <label class="checkbox-item">
+                <input type="checkbox"
+                       id="cookie-checkbox"
+                       name="product-type"
+                       value="gourmet-cookies">
+
+                <span>Gourmet Cookies</span>
+            </label>
+
+        </div>
+
     </div>
 
-    <div class="status-content">
 
-        <span class="status-label">
-            CURRENT STATUS
-        </span>
 
-        <h3 id="statusTitle"></h3>
+    <!-- ====================================== -->
+    <!-- CAKE DETAILS -->
+    <!-- ====================================== -->
 
-        <p id="statusDescription"></p>
+    <div class="product-group" id="cake-options">
 
-        <div class="status-message" id="statusMessage"></div>
+        <h3>Cake Details</h3>
+
+        <div class="form-group">
+
+            <label for="flavour">Cake Flavour</label>
+
+            <select id="flavour" name="flavour">
+
+                <option value="selectoption">Select Flavour</option>
+
+                <option value="vanilla">Classic Vanilla</option>
+                <option value="chocolate">Classic Chocolate</option>
+                <option value="red-velvet">Red Velvet</option>
+                <option value="carrot">Carrot Cake</option>
+                <option value="lotus-biscoff">Lotus Biscoff</option>
+                <option value="cinnamon">Cinnamon</option>
+                <option value="lemon-rasberry">Lemon & Raspberry</option>
+                <option value="cookies-cream">Cookies & Cream</option>
+                <option value="chocolate-caramel">Chocolate & Caramel</option>
+                <option value="vanilla-caramel">Vanilla & Caramel</option>
+                <option value="coffee-salted-caramel">Coffee & Salted Caramel</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="design-type">Cake Finish</label>
+
+            <select id="design-type" name="design-type">
+
+                <option value="selectoption">Select Finish</option>
+
+                <option value="fondant">Fondant</option>
+                <option value="buttercream">Buttercream</option>
+                <option value="icing">Icing</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="cake-size">Cake Size</label>
+
+            <select id="cake-size" name="cake-size">
+
+                <option value="selectoption">Select Size</option>
+
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+
+            </select>
+
+        </div>
 
     </div>
+
+
+
+    <!-- ====================================== -->
+    <!-- CUPCAKE DETAILS -->
+    <!-- ====================================== -->
+
+    <div class="product-group" id="cupcake-options">
+
+        <h3>Cupcake Details</h3>
+
+        <div class="form-group">
+
+            <label for="cupcake-topping">Cupcake Style</label>
+
+            <select id="cupcake-topping" name="cupcake-topping">
+
+                <option value="">Select Style</option>
+
+                <option value="simpleSwirl">Simple Swirl</option>
+                <option value="bespoke">Bespoke</option>
+                <option value="ediblePrint">Edible Print</option>
+                <option value="acrylicTopper">Acrylic Topper</option>
+                <option value="fondant">Fondant</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="cupcake-quantity">Number of Cupcakes</label>
+
+            <input type="number"
+                   id="cupcake-quantity"
+                   name="cupcake-quantity"
+                   min="0"
+                   value="0">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================== -->
+    <!-- MINI CAKES -->
+    <!-- ====================================== -->
+
+    <div class="product-group" id="mini-cake-options">
+
+        <h3>Mini Cake Details</h3>
+
+        <div class="form-group">
+
+            <label for="mini-cake-flavour">Mini Cake Flavour</label>
+
+            <select id="mini-cake-flavour"
+                    name="mini-cake-flavour">
+
+                <option value="">Select Flavour</option>
+
+                <option value="cookies-cream">Cookies &amp; Cream</option>
+                <option value="lotus-biscoff">Lotus Biscoff</option>
+                <option value="red-velvet">Red Velvet</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="mini-cake-quantity">Number of Mini Cakes</label>
+
+            <input type="number"
+                   id="mini-cake-quantity"
+                   name="mini-cake-quantity"
+                   min="0"
+                   value="0">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================== -->
+    <!-- GOURMET COOKIES -->
+    <!-- ====================================== -->
+
+    <div class="product-group" id="cookie-options">
+
+        <h3>Gourmet Cookie Details</h3>
+
+        <div class="form-group">
+
+            <label for="cookie-flavour">Cookie Flavour</label>
+
+            <select id="cookie-flavour"
+                    name="cookie-flavour">
+
+                <option value="">Select Flavour</option>
+
+                <option value="cookies-cream">Cookies &amp; Cream</option>
+                <option value="lotus-biscoff">Lotus Biscoff</option>
+                <option value="red-velvet">Red Velvet</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="cookie-quantity">Number of Cookies</label>
+
+            <input type="number"
+                   id="cookie-quantity"
+                   name="cookie-quantity"
+                   min="0"
+                   value="0">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ====================================== -->
+    <!-- DESIGN -->
+    <!-- ====================================== -->
+
+    <div class="form-group">
+
+        <label for="design">
+            Describe Your Design
+        </label>
+
+        <textarea id="design"
+                  name="design"
+                  rows="5"
+                  placeholder="Tell us about your theme, colours, inspiration or any special requests."
+                  required></textarea>
+
+    </div>
+
+    <button
+    type="button"
+    id="review-order-btn"
+    class="cta-button">
+    Review Your Order
+</button>
 
 </section>
-  </main>
+
+</main>
 
   <footer class="footer">
     <div class="footer__logo">
-<!-- Logo image would go here -->
-<img src="images/felicia-bakes-logo.png" alt="Felicia Bakes custom cakes and cupcakes logo">
-</div> 
-<!-- Icons -->
- <div class="footer-icons">
-  <a href="https://www.instagram.com/felicia__bakes/" target="_blank">
-    <i class="fab fa-instagram"></i>
-  </a>
+      <img src="images/felicia-bakes-logo.png"  alt="Felicia Bakes Logo">
+    </div>
 
-  <a href="https://www.tiktok.com/@felicia.bakes" target="_blank">
-    <i class="fab fa-tiktok"></i>
-  </a>
-
-  <a href="https://wa.me/27813315267" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <a href="mailto:info@feliciabakes.co.za">
+    <div class="footer-icons">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:info@feliciabakes.co.za">
         <i class="fa-solid fa-envelope"></i>
     </a>
-</div>
-<p>&copy; 2024 Felicia Bakes. All rights reserved.</p>
+    </div>
 
+    <p>&copy; 2024 Felicia Bakes. All rights reserved.</p>
 </footer>
   <script src="scripts/hamburger.js"></script>
-  <script src="scripts/tracking.js"></script>
 
+  <script src="scripts/request-quote.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
