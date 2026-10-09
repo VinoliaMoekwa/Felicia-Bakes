@@ -85,7 +85,7 @@ button.addEventListener("click", async () => {
 
   try {
     const response = await fetch(
-      `https://felicia-bakes-backend.onrender.com/track/${orderNumber}`
+      `https://felicia-bakes-backend.onrender.com/track/${encodeURIComponent(orderNumber)}`
     );
 
     if (!response.ok) {
@@ -125,4 +125,8 @@ button.addEventListener("click", async () => {
     orderJourney.hidden = true;
     currentStatus.hidden = true;
   }
+});
+
+orderInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") { event.preventDefault(); button.click(); }
 });
