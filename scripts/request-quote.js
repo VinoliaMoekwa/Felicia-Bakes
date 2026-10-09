@@ -109,8 +109,8 @@ const reviewButton = document.getElementById("review-order-btn");
 
 reviewButton.addEventListener("click", () => {
 
-    if (!fullName.value.trim() || !contactNumber.value.trim() || !email.value.trim() || !design.value.trim()) {
-        alert("Please complete your name, contact number, email address, and design request before reviewing your order.");
+    if (!fullName.value.trim() || !contactNumber.value.trim() || !design.value.trim()) {
+        alert("Please complete your name, contact number, and design request before reviewing your order.");
         return;
     }
 

@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 // ======================================
 // LOAD QUOTE REQUEST
 // ======================================
@@ -9,6 +10,7 @@ if (!quoteRequest) {
     alert("No quote request found. Please complete the request form first.");
 
     window.location.href = "request-quote.html";
+    return;
 
 }
 
@@ -141,7 +143,8 @@ function buildOrderPayload() {
 
     return {
         name: quoteRequest.customer.name,
-        email: quoteRequest.customer.email,
+        email: quoteRequest.customer.email || "",
+        phoneNumber: quoteRequest.customer.phone,
         cakeSelected: quoteRequest.products.cake.selected,
         cupcakeSelected: quoteRequest.products.cupcakes.selected,
         flavour: quoteRequest.products.cake.selected ? quoteRequest.products.cake.flavour : null,
@@ -244,5 +247,7 @@ submitButton.addEventListener("click", async () => {
         submitButton.textContent = "Send Quote Request via WhatsApp";
         submitButton.disabled = false;
     }
+
+});
 
 });
